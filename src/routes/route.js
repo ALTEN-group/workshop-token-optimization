@@ -11,7 +11,7 @@ router.post("/search", rEnt.get);
 // Get version history of a specific route
 router.get("/:id/history", history.get("route"));
 // add a route.
-router.post("/", checkRoutePattern, rEnt.addArraySubstack);
+router.post("/", rEnt.addArraySubstack);
 // Update a route.
 router.put("/", checkRoutePattern, rEnt.updateArraySubstack);
 // Bulk archive

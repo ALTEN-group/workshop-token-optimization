@@ -45,23 +45,12 @@ function init() {
   const ep = `-${ENV_NAME}:${port}`;
   return execute(query, args, null).then((r) => {
     // Collect unique service names to build base URLs later
-    const serviceNames = new Set();
+    // const serviceNames = new Set();
     // Reset the method index: each key is an HTTP method (GET, POST…),
     // each value is the subset of routes that accept that method
     routesByMethod = new Map();
     for (const row of r.rows) {
       serviceNames.add(row.serviceName);
-      // Anchor the pattern so a shorter prefix cannot match a more-privileged path
-      const rawPattern = row.url;
-      const anchored = `^${rawPattern.startsWith("^") ? rawPattern.slice(1) : rawPattern}${rawPattern.endsWith("$") ? "" : "$"}`;
-      // Pre-compile the URL pattern once at startup instead of on every request
-      const route = { ...row, _regex: new RegExp(anchored) };
-      // A route can accept several methods (e.g. GET + HEAD), so index it
-      // under each one — getOne() will only scan the relevant bucket
-      for (const method of row.methodNames ?? []) {
-        if (!routesByMethod.has(method)) routesByMethod.set(method, []);
-        routesByMethod.get(method).push(route);
-      }
     }
     serviceBaseUrls = new Map(
       [...serviceNames].map((name) => [name, `${san}${name}${ep}`]),

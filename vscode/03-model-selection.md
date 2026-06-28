@@ -1,10 +1,10 @@
-# VS Code · Module 03 — Lever 1: Model Selection 🟡
+# Module 03 — Lever 1: Model Selection 🟡
 
 **Goal:** match model size to task difficulty using the VS Code **model picker**, and feel the tradeoff between capability, speed, and cost.
 
 > **Rule of thumb:** large = planning/debugging · medium = implementation · small = simple tasks · **Auto by default**.
 
-Suggested starting point from [GitHub's model comparison page](https://docs.github.com/en/copilot/reference/ai-models/model-comparison):
+[GitHub's model comparison page](https://docs.github.com/en/copilot/reference/ai-models/model-comparison):
 
 - **Deep reasoning/debugging (large):** `GPT-5.5`, `GPT-5.4`, `Claude Opus 4.7`, `Gemini 2.5 Pro`
 - **General implementation (medium):** `GPT-5 mini`, `GPT-4.1`, `Claude Sonnet 4.6`
@@ -16,52 +16,46 @@ Pick one available in your org/plan. If a model isn't available, choose the clos
 
 ## The model picker
 
-In the Chat input box there's a model dropdown. You'll typically see **Auto** plus several named models of varying capability. **Auto** lets Copilot route the request, a great default, but choosing deliberately is a skill worth practicing.
+In the Chat input box there is a model dropdown. You will typically see **Auto** plus several named models of varying capability. **Auto** lets Copilot route the request, a great default, but choosing deliberately is a skill worth practicing.
 
 ---
 
 ## Exercise A : A "planning/debugging" task (use a large model)
 
-The sample app's [`tasks.ts`](../../sample-app/src/tasks.ts) has a subtle correctness bug.
+The sample app's [`app.js`](../../src/app.js) has a subtle correctness bug.
 
 1. New Chat, **Ask** mode, pick a **large/most-capable** model.
-2. Add [`tasks.ts`](../../sample-app/src/tasks.ts) and [`tasks.test.ts`](../../sample-app/src/tasks.test.ts).
+2. Add [`app.js`](../../src/app.js).
 3. Prompt:
 
    ```text
-   Don't change code yet. Explain why the "exactly equal to the threshold" test fails, and what the correct fix is. Be specific about the comparison operator.
+   Explain why the route resource fails to send data, and what the correct fix is.
    ```
 
-Record: did it pinpoint `>` vs `>=`? How clear was the reasoning?
+Record: did it pinpoint the wrong response mifleware ? How clear was the reasoning?
 
 ---
 
 ## Exercise B : A "simple" task (use a small/fast model)
 
 1. New Chat, **Agent** mode, pick a **smaller/faster** model.
-2. Add [`tasks.ts`](../../sample-app/src/tasks.ts).
+2. Add [`app.js`](../../src/app.js).
 3. Prompt:
 
    ```text
-   Change the comparison in filterByMinPriority from `>` to `>=`. Nothing else.
+   Change the correct response in "route" route. Nothing else.
    ```
 
-4. Run `npm test`. Expect 4/4 green.
-
-A small model is perfectly capable of a one-line mechanical edit, and it's cheaper/faster.
+A small model is perfectly capable of a one-line mechanical edit, and is cheaper/faster.
 
 ---
 
 ## Exercise C : Compare
 
-Repeat Exercise A's *diagnosis* with a small model, and Exercise B's *one-liner* with a large model. Note in your scorecard:
+Repeat Exercise A's *diagnosis* with a small model, and Exercise B's *one-liner* with a large model. 
 
-| | Diagnosis (hard) | One-liner (easy) |
-| --- | --- | --- |
-| Large model | quality? speed? | overkill? |
-| Small model | missed nuance? | fine? |
-
-**Lesson:** big models earn their cost on **ambiguous reasoning**; small models win on **well-specified mechanical** work. Using a big model for a one-liner wastes value; using a tiny model for a gnarly bug causes retries (which costs more overall).
+**Lesson:** big models earn their cost on **ambiguous reasoning**; small models win on **well-specified mechanical** work.
+Using a big model for a one-liner wastes value; using a tiny model for a gnarly bug causes retries which costs more overall.
 
 ---
 
@@ -73,6 +67,6 @@ Leave it on **Auto**. Reach for a specific model when you *know* the task is unu
 
 ## Expected outcome
 
-You've consciously matched three tasks to three model choices and can articulate why the right-sized model maximizes token value.
+You've consciously matched two tasks to several model choices and can articulate why the right-sized model maximizes token value.
 
 ➡️ Next: [04 — Lever 2: Context optimization](04-context-optimization.md)

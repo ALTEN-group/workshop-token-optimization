@@ -46,9 +46,9 @@ services:
       #liquibase
       LIQUIBASE_USER: ${LIQUIBASE_DB_USER}
       LIQUIBASE_PWD: ${LIQUIBASE_DB_PWD}
-      # ms_gateway
-      GATELIN_USER: ${GATELIN_DB_USER}
-      GATELIN_PWD: ${GATELIN_DB_PWD}
+      # workshop
+      WORKSHOP_USER: ${WORKSHOP_DB_USER}
+      WORKSHOP_PWD: ${WORKSHOP_DB_PWD}
     stdin_open: true
     tty: true
     networks:
@@ -56,7 +56,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "${POSTGRES_ROOT_USER}", "-d", "${GATELIN_DB_NAME}"]
+      test: ["CMD", "pg_isready", "-U", "${POSTGRES_ROOT_USER}", "-d", "${WORKSHOP_DB_NAME}"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -101,17 +101,17 @@ services:
       dockerfile: dockerfile
       args:
         LIQUIBASE_VERSION: ${LIQUIBASE_VERSION}
-    container_name: ${GATELIN_MIGRATION_HOST}
-    hostname: ${GATELIN_MIGRATION_HOST}
+    container_name: ${WORKSHOP_MIGRATION_HOST}
+    hostname: ${WORKSHOP_MIGRATION_HOST}
     environment:
       TZ: ${TZ}
       LIQUIBASE_COMMAND_USERNAME: ${LIQUIBASE_DB_USER}
       LIQUIBASE_COMMAND_PASSWORD: ${LIQUIBASE_DB_PWD}
       DB_HOST: ${POSTGRES_HOST}
       DB_PORT: ${POSTGRES_PORT}
-      DB_NAME: ${GATELIN_DB_NAME}
-      DB_USER: ${GATELIN_DB_USER}
-      DB_PWD: ${GATELIN_DB_PWD}
+      DB_NAME: ${WORKSHOP_DB_NAME}
+      DB_USER: ${WORKSHOP_DB_USER}
+      DB_PWD: ${WORKSHOP_DB_PWD}
       UPDATE: ${LIQUIBASE_UPDATE}
       ROLLBACK: ${LIQUIBASE_ROLLBACK}
       SNAPSHOT: snapshot/snapshot${LIQUIBASE_SNAPSHOT}
@@ -123,8 +123,7 @@ services:
     networks:
       - internal
     volumes:
-      - ${PWD}/db/liquibase/gateway/:/liquibase/changelog
-      - ${PWD}/db/liquibase/data/:/liquibase/data
+      - ${PWD}/db/liquibase/workshop/:/liquibase/changelog
 
   workshop:
     build:
@@ -137,29 +136,29 @@ services:
         NODE_VERSION: ${NODE_VERSION}
         NODE_ENV: ${NODE_ENV}
     image: dwtechs/gatelin:${NODE_ENV:-development}
-    container_name: ${GATELIN_HOST}
-    hostname: ${GATELIN_HOST}
+    container_name: ${WORKSHOP_HOST}
+    hostname: ${WORKSHOP_HOST}
     depends_on:
       postgres:
         condition: service_healthy
-      gatelin_migration:
+      workshop_migration:
         condition: service_completed_successfully
     environment:
       PORT: ${DEFAULT_PORT}
       TZ: ${TZ}
-      PWD_CHECK_URL: ${GATELIN_PWD_CHECK_URL}
-      USER_SEARCH_URL: ${GATELIN_USER_SEARCH_URL}
+      PWD_CHECK_URL: ${WORKSHOP_PWD_CHECK_URL}
+      USER_SEARCH_URL: ${WORKSHOP_USER_SEARCH_URL}
       DB_HOST: ${POSTGRES_HOST}
-      DB_NAME: ${GATELIN_DB_NAME}
-      DB_USER: ${GATELIN_DB_USER}
-      DB_PWD: ${GATELIN_DB_PWD}
-      TOKEN_SECRET: ${GATELIN_TOKEN_SECRET}
+      DB_NAME: ${WORKSHOP_DB_NAME}
+      DB_USER: ${WORKSHOP_DB_USER}
+      DB_PWD: ${WORKSHOP_DB_PWD}
+      TOKEN_SECRET: ${WORKSHOP_TOKEN_SECRET}
       APP_NAME: ${APP_NAME}
       ENV_NAME: ${ENV_NAME}
       SERVER_SCHEME: ${SERVER_SCHEME}
-      SERVICE_NAME: ${GATELIN_HOST}
-      ACCESS_TOKEN_DURATION: ${GATELIN_ACCESS_TOKEN_DURATION}
-      REFRESH_TOKEN_DURATION: ${GATELIN_REFRESH_TOKEN_DURATION}
+      SERVICE_NAME: ${WORKSHOP_HOST}
+      ACCESS_TOKEN_DURATION: ${WORKSHOP_ACCESS_TOKEN_DURATION}
+      REFRESH_TOKEN_DURATION: ${WORKSHOP_REFRESH_TOKEN_DURATION}
       # PWD_MIN_LENGTH_POLICY: ${GATELIN_PWD_MIN_LENGTH_LEGACY}
       # PWD_MAX_LENGTH_POLICY: ${GATELIN_PWD_MAX_LENGTH_LEGACY}
       # PWD_NUMBERS_POLICY: ${GATELIN_PWD_NUMBERS_LEGACY}
@@ -171,7 +170,7 @@ services:
     volumes:
       - ${PWD}/src:/usr/src/app/src
       - ${PWD}/tests:/usr/src/app/tests
-      - gateway_node_modules:/usr/src/app/node_modules
+      - workshop_node_modules:/usr/src/app/node_modules
     labels:
       - "traefik.enable=true"
       - "stack.name=${STACK_NAME}"
@@ -197,9 +196,5 @@ networks:
 volumes:
   postgres_data:
     driver: local
-  gateway_node_modules:
+  workshop_node_modules:
     driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${PWD}/node_modules

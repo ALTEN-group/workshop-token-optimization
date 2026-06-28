@@ -1,0 +1,13 @@
+node_modules/*
+website/node_modules/*
+/.scannerwork
+.DS_Store
+Thumbs.db
+src/public/*
+tests/coverage/
+docker/conf/.env.dev
+docker/conf/.env.prod
+website/docs/.vitepress/cache
+
+# APM dependencies
+apm_modules/

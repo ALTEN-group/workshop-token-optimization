@@ -14,7 +14,7 @@ import routeSvc from "./services/route.js";
 
 
 // middlewares
-import { send } from "./middlewares/res/send.js";
+import { send204 } from "./middlewares/res/send-204.js";
 
 // Routes
 import route from "./routes/route.js";
@@ -27,7 +27,7 @@ app.use(`${s}health`, healixRouter);
 app.use(startTimer);
 
 // Routes
-app.use(`${s}routes`, route, send);
+app.use(`${s}routes`, route, send204);
 
 // Performance measurement ends
 app.use(endTimer);

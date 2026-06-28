@@ -29,20 +29,20 @@ export function checkRoutePattern(req, res, next) {
     if (typeof pattern !== "string") continue;
 
     if (NESTED_QUANTIFIER_RE.test(pattern)) {
-      return next({
-        statusCode: 400,
-        message: `Route pattern "${pattern}" contains nested quantifiers that may cause catastrophic backtracking (ReDoS).`,
-      });
+      // return next({
+      //   statusCode: 400,
+      //   message: `Route pattern "${pattern}" contains nested quantifiers that may cause catastrophic backtracking (ReDoS).`,
+      // });
     }
 
     // Also reject patterns that cannot be compiled at all
     try {
       new RegExp(pattern);
     } catch {
-      return next({
-        statusCode: 400,
-        message: `Route pattern "${pattern}" is not a valid regular expression.`,
-      });
+      // return next({
+      //   statusCode: 400,
+      //   message: `Route pattern "${pattern}" is not a valid regular expression.`,
+      // });
     }
   }
 

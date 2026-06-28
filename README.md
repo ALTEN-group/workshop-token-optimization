@@ -9,7 +9,7 @@
 To start the application and its services (PostgreSQL, Liquibase migration, Traefik, application) in development mode using Docker Compose:
 
 ```sh
-docker compose --env-file docker/conf/.env.dev -f docker/docker-compose.yml up --build
+docker compose --env-file docker/conf/.env.dev -f docker/docker-compose.yml up --build -d
 ```
 
 ## Modules

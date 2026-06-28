@@ -3,7 +3,7 @@
 -- methodIds:  1=GET  2=POST  3=PUT   4=PATCH  5=DELETE      6=HEAD  7=OPTIONS
 -- Note: OPTIONS is handled statically by corsMiddleware before checkRoute — not stored in methodIds
 
-INSERT INTO routes (pattern, name, description, protected, "creatorId", "creatorName") VALUES                         
+INSERT INTO route (pattern, name, description, protected, "creatorId", "creatorName") VALUES                         
   -- routes (3)
   ('/search',             'searchRoutes',    'Search routes',        true, -1, 'system'),
   ('/(?<id>\d+)/history', 'getRouteHistory', 'Manage route history', true, -1, 'system'),
