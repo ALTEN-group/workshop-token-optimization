@@ -1,0 +1,7 @@
+# Ignore generated Liquibase logs and snapshots in all module subfolders
+**/logs/*.log
+**/snapshot/*.json
+
+# Keep placeholder files so empty dirs stay in git
+!**/logs/.gitkeep
+!**/snapshot/.gitkeep

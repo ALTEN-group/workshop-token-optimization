@@ -1,0 +1,205 @@
+name: ${APP_NAME}
+
+x-service-healthcheck: &healthcheck
+  test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/gateway/health"]
+  interval: 10s
+  timeout: 5s
+  retries: 5
+
+# dockerfile mount during build
+x-secret-args: &secretArgs
+  secrets:
+    - apt_repository
+    - apk_repository
+    - npmrc
+
+# mount for run
+x-secret-mount: &secretMount
+  - source: npmrc
+    target: /home/user/.npmrc
+
+x-default-args: &defaultArgs
+  UID: ${UID}
+  GID: ${GID}
+  TZ: ${TZ}
+
+x-default-envs: &defaultEnvs
+  PORT: ${DEFAULT_PORT}
+  TZ: ${TZ}
+
+services:
+
+  postgres:
+    platform: linux/amd64
+    build:
+      context: ${PWD}/db/pgsql
+      dockerfile: dockerfile
+      args:
+        - POSTGRES_VERSION=${POSTGRES_VERSION}
+    container_name: ${POSTGRES_HOST}
+    hostname: ${POSTGRES_HOST}
+    environment:
+      TZ: ${TZ}
+      POSTGRES_DBS: ${POSTGRES_DBS}
+      POSTGRES_USER: ${POSTGRES_ROOT_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_ROOT_PWD}
+      #liquibase
+      LIQUIBASE_USER: ${LIQUIBASE_DB_USER}
+      LIQUIBASE_PWD: ${LIQUIBASE_DB_PWD}
+      # ms_gateway
+      GATELIN_USER: ${GATELIN_DB_USER}
+      GATELIN_PWD: ${GATELIN_DB_PWD}
+    stdin_open: true
+    tty: true
+    networks:
+      - internal
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${POSTGRES_ROOT_USER}", "-d", "${GATELIN_DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  traefik:
+    image: traefik:${TRAEFIK_VERSION}
+    container_name: ${TRAEFIK_HOST}
+    hostname: ${TRAEFIK_HOST}
+    command:
+      - --providers.docker=true
+      - --providers.docker.network=${APP_NAME}-internal-${ENV_NAME}
+      - --providers.docker.constraints=Label(`stack.name`,`${APP_NAME}-${ENV_NAME}`)
+      - --entryPoints.web.address=${TRAEFIK_ENTRYPOINTS_WEB_ADDRESS}
+      - --entrypoints.web.forwardedHeaders=true
+      - --entryPoints.web.forwardedHeaders.insecure=true
+      - --providers.docker.exposedByDefault=${TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT}
+      - --api.insecure=${TRAEFIK_API_INSECURE}
+      - --log.level=${TRAEFIK_LOG_LEVEL}
+      - --accesslog=${TRAEFIK_ACCESSLOG}
+      - --ping=true
+      - --api.dashboard=true
+    labels:
+      - "traefik.http.middlewares.gateway.stripprefix.prefixes=/api"     
+      - "traefik.enable=true"
+      - "stack.name=${STACK_NAME}"
+      - "traefik.http.routers.dashboard.rule=PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
+      - "traefik.http.routers.dashboard.entrypoints=traefik"
+      - "traefik.http.routers.dashboard.service=api@internal"
+    restart: always
+    ports:
+      - ${TRAEFIK_PORT}:80
+      - ${TRAEFIK_DASH_PORT}:8080
+    networks:
+      - internal
+      - external
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  workshop_migration:
+    build:
+      context: ${PWD}/db/liquibase
+      dockerfile: dockerfile
+      args:
+        LIQUIBASE_VERSION: ${LIQUIBASE_VERSION}
+    container_name: ${GATELIN_MIGRATION_HOST}
+    hostname: ${GATELIN_MIGRATION_HOST}
+    environment:
+      TZ: ${TZ}
+      LIQUIBASE_COMMAND_USERNAME: ${LIQUIBASE_DB_USER}
+      LIQUIBASE_COMMAND_PASSWORD: ${LIQUIBASE_DB_PWD}
+      DB_HOST: ${POSTGRES_HOST}
+      DB_PORT: ${POSTGRES_PORT}
+      DB_NAME: ${GATELIN_DB_NAME}
+      DB_USER: ${GATELIN_DB_USER}
+      DB_PWD: ${GATELIN_DB_PWD}
+      UPDATE: ${LIQUIBASE_UPDATE}
+      ROLLBACK: ${LIQUIBASE_ROLLBACK}
+      SNAPSHOT: snapshot/snapshot${LIQUIBASE_SNAPSHOT}
+      LIQUIBASE_LOG_LEVEL: ${LIQUIBASE_LOG_LEVEL}
+      LIQUIBASE_COMMAND_CONTEXTS: ${LIQUIBASE_COMMAND_CONTEXTS}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - internal
+    volumes:
+      - ${PWD}/db/liquibase/gateway/:/liquibase/changelog
+      - ${PWD}/db/liquibase/data/:/liquibase/data
+
+  workshop:
+    build:
+      context: ${PWD}
+      dockerfile: dockerfile
+      args:
+        UID: ${UID}
+        GID: ${GID}
+        TZ: ${TZ}
+        NODE_VERSION: ${NODE_VERSION}
+        NODE_ENV: ${NODE_ENV}
+    image: dwtechs/gatelin:${NODE_ENV:-development}
+    container_name: ${GATELIN_HOST}
+    hostname: ${GATELIN_HOST}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      gatelin_migration:
+        condition: service_completed_successfully
+    environment:
+      PORT: ${DEFAULT_PORT}
+      TZ: ${TZ}
+      PWD_CHECK_URL: ${GATELIN_PWD_CHECK_URL}
+      USER_SEARCH_URL: ${GATELIN_USER_SEARCH_URL}
+      DB_HOST: ${POSTGRES_HOST}
+      DB_NAME: ${GATELIN_DB_NAME}
+      DB_USER: ${GATELIN_DB_USER}
+      DB_PWD: ${GATELIN_DB_PWD}
+      TOKEN_SECRET: ${GATELIN_TOKEN_SECRET}
+      APP_NAME: ${APP_NAME}
+      ENV_NAME: ${ENV_NAME}
+      SERVER_SCHEME: ${SERVER_SCHEME}
+      SERVICE_NAME: ${GATELIN_HOST}
+      ACCESS_TOKEN_DURATION: ${GATELIN_ACCESS_TOKEN_DURATION}
+      REFRESH_TOKEN_DURATION: ${GATELIN_REFRESH_TOKEN_DURATION}
+      # PWD_MIN_LENGTH_POLICY: ${GATELIN_PWD_MIN_LENGTH_LEGACY}
+      # PWD_MAX_LENGTH_POLICY: ${GATELIN_PWD_MAX_LENGTH_LEGACY}
+      # PWD_NUMBERS_POLICY: ${GATELIN_PWD_NUMBERS_LEGACY}
+      # PWD_UPPERCASE_POLICY: ${GATELIN_PWD_UPPERCASE_LEGACY}
+      # PWD_LOWERCASE_POLICY: ${GATELIN_PWD_LOWERCASE_LEGACY}
+      # PWD_SYMBOLS_POLICY: ${GATELIN_PWD_SYMBOLS_LEGACY}
+    networks:
+      - internal
+    volumes:
+      - ${PWD}/src:/usr/src/app/src
+      - ${PWD}/tests:/usr/src/app/tests
+      - gateway_node_modules:/usr/src/app/node_modules
+    labels:
+      - "traefik.enable=true"
+      - "stack.name=${STACK_NAME}"
+      - "traefik.http.routers.gateway.rule=PathPrefix(`/api`)"
+      - "traefik.http.routers.gateway.entrypoints=web"
+      - "traefik.http.routers.gateway.service=gateway"
+      - "traefik.http.routers.gateway.middlewares=strip-prefix"
+      - "traefik.http.middlewares.strip-prefix.stripprefix.prefixes=/api"
+      - "traefik.http.middlewares.strip-prefix.stripprefix.forceSlash=false"
+      - "traefik.http.services.gateway.loadBalancer.server.port=${DEFAULT_PORT}"
+    healthcheck: *healthcheck
+  
+ 
+networks:
+  internal:
+    name: ${APP_NAME}-internal-${ENV_NAME}
+    driver: bridge 
+  external:
+    name: ${APP_NAME}-external-${ENV_NAME}
+    driver: bridge
+
+
+volumes:
+  postgres_data:
+    driver: local
+  gateway_node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/node_modules

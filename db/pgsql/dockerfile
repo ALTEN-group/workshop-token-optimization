@@ -1,0 +1,4 @@
+ARG POSTGRES_VERSION
+FROM ${POSTGRES_VERSION}
+
+COPY create_db.sh /docker-entrypoint-initdb.d/

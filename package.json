@@ -1,0 +1,31 @@
+{
+  "name": "workshop-token-optimization",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage"
+  },
+  "author": "Ludovic Cluber",
+  "license": "MIT",
+  "dependencies": {
+    "@dwtechs/antity-pgsql": "0.18.1",
+    "@dwtechs/checkard": "3.6.0",
+    "@dwtechs/errandler-express": "0.1.0",
+    "@dwtechs/healix-express": "0.1.0",
+    "@dwtechs/servpico-express": "0.2.1",
+    "@dwtechs/sparray": "0.2.1",
+    "@dwtechs/toker-express": "0.7.3",
+    "@dwtechs/winstan": "0.7.1" ,
+    "@dwtechs/winstan-plugin-express-perf": "0.2.1",
+    "express": "5.1.0"
+  },
+  "devDependencies": {
+    
+  }
+}
