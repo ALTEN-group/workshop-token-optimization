@@ -1,4 +1,3 @@
-// @ts-check
 
 /**
  * Express middleware that sends a 204 No Content response.

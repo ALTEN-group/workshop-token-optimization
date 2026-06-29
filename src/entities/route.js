@@ -1,4 +1,4 @@
-// @ts-check
+
 import { SQLEntity } from "@dwtechs/antity-pgsql";
 
 export default new SQLEntity("route", [

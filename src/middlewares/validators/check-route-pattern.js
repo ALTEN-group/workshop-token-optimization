@@ -1,4 +1,3 @@
-// @ts-check
 
 /**
  * Detects catastrophically backtracking (ReDoS) regex patterns.

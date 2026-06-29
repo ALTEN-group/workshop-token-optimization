@@ -19,15 +19,13 @@ import { send204 } from "./middlewares/res/send-204.js";
 // Routes
 import route from "./routes/route.js";
 
-const s = "/gateway/";
-
 app.use(express.json({ limit: "100kb" }));
-app.use(`${s}health`, healixRouter);
+app.use('health', healixRouter);
 // performance measurement starts for any call to the following routes
 app.use(startTimer);
 
 // Routes
-app.use(`${s}routes`, route, send204);
+app.use('routes', route, send204);
 
 // Performance measurement ends
 app.use(endTimer);

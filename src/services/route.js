@@ -1,4 +1,3 @@
-// @ts-check
 
 import { execute } from "@dwtechs/antity-pgsql";
 import rEnt from "../entities/route.js";

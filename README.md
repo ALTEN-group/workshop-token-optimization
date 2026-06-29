@@ -16,17 +16,16 @@ docker compose --env-file docker/conf/.env.dev -f docker/docker-compose.yml up -
 
 | #   | Module                           | Concept                                       | Level |
 | --- | -------------------------------- | --------------------------------------------- | ----- |
-| 00  | Setup & ROI mindset              | Maximize token value                          | 🟢    |
-| 01  | Why quality matters              | Agent ROI + compounding error                 | 🟢    |
-| 02  | How the model "thinks"           | Stateless LLM, context window                 | 🟢    |
-| 03  | Lever 1 : Model selection        | Right model for the job                       | 🟡    |
-| 04  | Lever 2 : Context optimization   | As little as possible, as much as necessary   | 🟡    |
-| 05  | Lever 3 : Prompt engineering     | Precise prompts + stop conditions             | 🟡    |
-| 06  | Lever 4 : Workflow design        | Research → Plan → Implement                   | 🟡    |
-| 07  | Lever 5 : Deterministic controls | Tests, linters, security gates                | 🟡    |
-| 08  | Advanced controls                | Instructions, agents, skills, MCP, sub-agents | 🔴    |
-| 09  | Power-user tips                  | Scripting, filtering, usage analysis          | 🔴    |
-| 10  | Capstone                         | Put all 5 levers together                     | 🔴    |
+| 00  | [Setup & ROI mindset](vscode/00-setup.md) | Maximize token value                          | 🟢    |
+| 01  | [Agent gambling](vscode/01-agent-gambling.md) | Agent ROI + compounding error                 | 🟢    |
+| 02  | [Stateless model](vscode/02-stateless-model.md) | Stateless LLM, context window                 | 🟢    |
+| 03  | [Lever 1 : Model selection](vscode/03-model-selection.md) | Right model for the job                       | 🟡    |
+| 04  | [Lever 2 : Context optimization](vscode/04-context-optimization.md) | As little as possible, as much as necessary   | 🟡    |
+| 05  | [Lever 3 : Prompt engineering](vscode/05-prompt-engineering.md) | Precise prompts + stop conditions             | 🟡    |
+| 06  | [Lever 4 : Workflow design](vscode/06-workflow-design.md) | Research → Plan → Implement                   | 🟡    |
+| 07  | [Lever 5 : Deterministic controls](vscode/07-deterministic-controls.md) | Tests, linters, security gates                | 🟡    |
+| 08  | [Lever 6 : Persistent context](vscode/08-persistent-context.md) | Instructions, agents, skills, MCP, sub-agents | 🔴    |
+| 09  | [Power-user tips](vscode/09-power-user-tips.md) | Scripting, filtering, usage analysis          | 🔴    |
 
 ---
 

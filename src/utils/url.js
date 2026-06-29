@@ -1,4 +1,3 @@
-// @ts-check
 
 const TRAILING_SLASH_RE = /\/$/;
 

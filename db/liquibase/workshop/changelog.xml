@@ -6,14 +6,14 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
  
   <!-- structures -->
-  <changeSet id="01-struct-01" author="lcluber">
+  <changeSet id="01-struct" author="lcluber">
     <comment></comment>
     <sqlFile path="versions/01-struct/01-route.sql" splitStatements="false"/>
   </changeSet>
   
   <!-- data -->
-  <changeSet id="01-data-01" author="lcluber">
+  <changeSet id="02-data" author="lcluber">
     <comment></comment>
-    <sqlFile path="versions/01-data/01-route.sql" splitStatements="false"/>
+    <sqlFile path="versions/02-data/01-route.sql" splitStatements="false"/>
   </changeSet>
 </databaseChangeLog>

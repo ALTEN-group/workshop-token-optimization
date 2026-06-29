@@ -1,4 +1,4 @@
-# Module 02 — How the Model Thinks 🟢
+# Module 02 — Stateless model 🟢
 
 **Goal:** internalize the model is **stateless** and that the **context window** has biases, then observe both directly in VS Code.
 
