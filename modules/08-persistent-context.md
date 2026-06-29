@@ -14,7 +14,7 @@ The sample app has **no** project instructions, so the agent re-guesses conventi
 2. Prompt:
 
    ```text
-   Create .github/copilot-instructions.md for the src app. Capture: JavaScript strict, 2-space indent, prefer const ; Express routes live in src/routes/ folder; services in src/services/ folder; validate all request using entities in entities/ folder using @dwtechs/antity-pgsql; Every change must keep `npm run build`, `npm test`, and `npm run lint` green. Keep it concise.
+   Create .github/copilot-instructions.md for the src app. Capture: JavaScript strict, 2-space indent, prefer const ; Express routes live in src/routes/ folder; services in src/services/ folder; validate all requests using entities in entities/ folder using @dwtechs/antity-pgsql; Every change must keep `npm run build`, `npm test`, and `npm run lint` green. Keep it concise.
    ```
 
 3. Open the file, trim anything bloated (instructions are re-sent every turn, keep them tight).

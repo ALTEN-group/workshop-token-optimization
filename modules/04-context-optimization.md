@@ -12,8 +12,8 @@ Task: add input validation to `POST /route.js`.
 
 1. New Chat, **Agent** mode.
 2. Decide the minimal set. Which files matter? Likely:
-   - [`src/services/route.js`](../../src/services/routes.ts)
-   - [`src/validators/check-route-pattern.js`](../../src/validators/check-route-pattern.js)
+   - [`src/services/route.js`](../src/services/route.js)
+   - [`src/validators/check-route-pattern.js`](../src/validators/check-route-pattern.js)
 3. Prompt:
 
    ```text

@@ -44,4 +44,4 @@ This 10-second habit is the highest-ROI thing in the whole workshop.
 - Copilot Chat works and you can switch modes/models.
 - Optional : The sample app builds, with exactly one intentional failing test.
 
-➡️ Next: [01 — Quality matters](01-quality-matters.md)
+➡️ Next: [01 — Agent guessing](01-agent-guessing.md)

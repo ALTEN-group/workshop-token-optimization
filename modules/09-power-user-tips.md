@@ -14,13 +14,13 @@ Examples (VS Code terminal):
 
 ```bash
 # Only the lines that matter, instead of the whole file
-grep -n "RegExp" sample-app/src/*.js
+grep -n "RegExp" src/**/*.js
 
 # Just the dependency names, not the whole package.json
-node -p "Object.keys(require('./src/package.json').dependencies)"
+node -p "Object.keys(require('./package.json').dependencies)"
 
 # A test summary instead of full output
-cd src && npm test 2>&1 | tail -n 20
+npm test 2>&1 | tail -n 20
 ```
 
 Paste the small result into Chat. You decide what's relevant, not the model wading through noise.
@@ -68,10 +68,10 @@ Turn recurring fixes into **persistent instructions or skills** so you never pay
 
 ## 5. Bundle the guardrail into prompts
 
-End every implementation prompt with its verification so the agent self-gates instead of handing you broken work:
+Ensure every implementation prompt concludes with verification checks, e.g.:
 
 ```text
-Implement <change> in srcp. Done when `npm run build`, `npm test` and `npm run lint` pass.
+Implement <change> in src. Done when `npm run build`, `npm test` and `npm run lint` pass.
 ```
 
 This is Lever 5 (deterministic controls) wired straight into your prompt loop.

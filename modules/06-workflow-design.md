@@ -15,7 +15,7 @@ Refactor the sample app so business logic, routing, and storage are cleanly sepa
 ## Phase 1 : Think (Ask mode, read-only by instruction)
 
 1. New Chat, **Agent** mode, capable model.
-2. Add [`app.js`](../../src/app.js), [`route.js route `](../../src/routes/route.js), [`route.js service`](../../src/services/route.js), [`01-route.sql`](../../db/liquibase/workshop/versions/01-struct/01-route.sql).
+2. Add [`app.js`](../src/app.js), [`route.js route `](../src/routes/route.js), [`route.js service`](../src/services/route.js), [`01-route.sql`](../db/liquibase/workshop/versions/01-struct/01-route.sql).
 3. Prompt:
 
    ```text

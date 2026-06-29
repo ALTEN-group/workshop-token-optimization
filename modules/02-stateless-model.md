@@ -34,7 +34,7 @@
 
 ## Experiment 2 : Context grows every turn
 
-1. New Chat (**Agent** mode). Ask it to read three files (add [`src/routes/route.js`](../../src/routes/route.tjs), [`src/services/route.js`](../../src/services/route.js), [`src/entities/route.js`](../../src/entities/route.js)) and summarize each.
+1. New Chat (**Agent** mode). Ask it to read three files (add [`src/routes/route.js`](../src/routes/route.js), [`src/services/route.js`](../src/services/route.js), [`src/entities/route.js`](../src/entities/route.js)) and summarize each.
 2. Then ask a follow-up: "now explain how a POST request flows to create a route."
 
 Notice the second answer implicitly re-includes everything from turn 1. In a long session this is how tokens **balloon**, every file and every prior answer rides along on each new turn.

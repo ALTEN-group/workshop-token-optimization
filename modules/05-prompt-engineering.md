@@ -27,12 +27,12 @@ Weak prompt:
 make the search better
 ```
 
-Rewrite it for the `GET /route/search` endpoint in [`route.js`](../../src/routes/route.js).
+Rewrite it for the `GET /route/search` endpoint in [`route.js`](../src/routes/route.js).
 
 
 ```text
 In src/routes/route.js, the GET /route/search endpoint does nothing.
-Look into node_modules @dwtechs/Antity-pgsql library and use it to handle the search functionality with filter capabilities.
+Look into node_modules @dwtechs/antity-pgsql library and use it to handle the search functionality with filter capabilities.
 
 ```
 
@@ -42,7 +42,7 @@ Run it (Agent mode, add only `route.js`).
 
 ## Exercise B : Stop conditions prevent scope creep
 
-1. New Chat, **Agent** mode. Add [`route.js`](../../src/routes/route.js).
+1. New Chat, **Agent** mode. Add [`route.js`](../src/routes/route.js).
 2. Prompt **without** a stop condition:
 
    ```text

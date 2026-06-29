@@ -22,14 +22,14 @@
 ## Part B : Invest up front (the right way)
 
 1. **Start a brand-new Chat session** (clean context).
-2. **Agent** mode. Add precise context: drag and drop [`src/services/route.js`](../../src/services/route.js) into the chat.
+2. **Agent** mode. Add precise context: drag and drop [`src/services/route.js`](../src/services/route.js) into the chat.
 3. Use a precise prompt with a **stop condition**:
 
    ```text
-   the workshop service throws an error at startup : "service=workshop msg="App cannot start: serviceNames is not defined". Look into src/ folder, Fix only that error then stop. Do not change anything else.
+   The workshop service throws an error at startup : "service=workshop msg="App cannot start: serviceNames is not defined". Look into src/ folder, Fix only that error then stop. Do not change anything else.
    ```
 
-4. look into workshop service logs. Confirm the service starts properly.
+4. Look into the workshop service logs. Confirm the service starts properly.
 
 
 ---

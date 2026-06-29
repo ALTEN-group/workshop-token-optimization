@@ -16,7 +16,7 @@ An agent that can **run a test and see red** will fix its own mistake before it 
 
 The sample app has **no ESLint config**.
 
-1. New Chat, **Agent** mode. Add [`package.json`](../../src/package.json).
+1. New Chat, **Agent** mode. Add [`package.json`](../package.json).
 2. Prompt:
 
    ```text
@@ -31,7 +31,7 @@ You just gave every future agent task a new automatic check.
 
 ## Exercise B : Tests as the contract
 
-1. New Chat, **Agent** mode. Add [`routes.js`](../../src/routes/route.js).
+1. New Chat, **Agent** mode. Add [`route.js`](../src/routes/route.js).
 2. Prompt:
 
    ```text
@@ -44,11 +44,11 @@ You just gave every future agent task a new automatic check.
 
 ## Exercise C : Security check
 
-1. New Chat, **Agent** mode. Add only [`routes.js`](../../src/routes/route.js).
+1. New Chat, **Agent** mode. Add only [`route.js`](../src/routes/route.js).
 2. Prompt:
 
    ```text
-   Create security instructions for any routes that checks for SQL injection and other vulnerabilities whenever we crate/update a route.
+   Create security instructions for any routes that checks for SQL injection and other vulnerabilities whenever we create/update a route.
    ```
 
 3. Confirm with a check of the existing route.

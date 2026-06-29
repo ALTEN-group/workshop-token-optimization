@@ -22,24 +22,24 @@ In the Chat input box there is a model dropdown. You will typically see **Auto**
 
 ## Exercise A : A "planning/debugging" task (use a large model)
 
-The sample app's [`app.js`](../../src/app.js) has a subtle correctness bug.
+The sample app's [`app.js`](../src/app.js) has a subtle correctness bug.
 
 1. New Chat, **Ask** mode, pick a **large/most-capable** model.
-2. Add [`app.js`](../../src/app.js).
+2. Add [`app.js`](../src/app.js).
 3. Prompt:
 
    ```text
    Explain why the route resource fails to send data, and what the correct fix is.
    ```
 
-Record: did it pinpoint the wrong response mifleware ? How clear was the reasoning?
+Record: did it pinpoint the wrong response middleware ? How clear was the reasoning?
 
 ---
 
 ## Exercise B : A "simple" task (use a small/fast model)
 
 1. New Chat, **Agent** mode, pick a **smaller/faster** model.
-2. Add [`app.js`](../../src/app.js).
+2. Add [`app.js`](../src/app.js).
 3. Prompt:
 
    ```text

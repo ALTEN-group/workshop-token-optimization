@@ -1,8 +1,8 @@
 # VS Code Track — Agent Quality & Token Optimization
 
-This track teaches the workshop using **GitHub Copilot in Visual Studio Code** (Chat and Agent modes). Work through the modules in order, each builds on the last and uses the [`sample-app`](../../sample-app/).
+This track teaches the workshop using **GitHub Copilot in Visual Studio Code** (Chat and Agent modes). Work through the modules in order, each builds on the last and uses the [`sample-app`](../src).
 
-> New to the ideas? Do the [tool-agnostic concepts](../../concepts/) first.
+> New to the ideas? Do the [tool-agnostic concepts](../concepts/) first.
 
 ---
 
@@ -17,7 +17,7 @@ This track teaches the workshop using **GitHub Copilot in Visual Studio Code** (
 
 ## Start here
 
-[`vscode/README.md`](vscode/README.md) 
+[Setup & ROI mindset](00-setup.md) 
 
 ---
 
@@ -26,16 +26,15 @@ This track teaches the workshop using **GitHub Copilot in Visual Studio Code** (
 | # | Module | Level |
 | --- | --- | --- |
 | 00 | [Setup & ROI mindset](00-setup.md) | 🟢 |
-| 01 | [Why quality matters](01-why-quality-matters.md) | 🟢 |
-| 02 | [How the model thinks](02-how-the-model-thinks.md) | 🟢 |
+| 01 | [Agent guessing](01-agent-guessing.md) | 🟢 |
+| 02 | [Stateless model](02-stateless-model.md) | 🟢 |
 | 03 | [Lever 1 — Model selection](03-model-selection.md) | 🟡 |
 | 04 | [Lever 2 — Context optimization](04-context-optimization.md) | 🟡 |
 | 05 | [Lever 3 — Prompt engineering](05-prompt-engineering.md) | 🟡 |
 | 06 | [Lever 4 — Workflow design](06-workflow-design.md) | 🟡 |
 | 07 | [Lever 5 — Deterministic controls](07-deterministic-controls.md) | 🟡 |
-| 08 | [Advanced controls](08-advanced-controls.md) | 🔴 |
+| 08 | [Lever 6 — Persistent context](08-persistent-context.md) | 🔴 |
 | 09 | [Power-user tips](09-power-user-tips.md) | 🔴 |
-| 10 | [Capstone](10-capstone.md) | 🔴 |
 
 ---
 
