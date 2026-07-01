@@ -9,14 +9,15 @@
 ## 1. Filter data *before* it enters the context
 
 Don't make the agent read a file to find one thing. Pre-filter then paste only the result.
+When you can, paste the small important content into Chat. You decide what's relevant, not the model wading through noise.
 
-Examples (terminal):
+Create commands for your agents to pre-filter data before it enters the context.
+Example instead of npm test you can use a command that outputs only the last 20 lines of the test output:
 
 ```bash
 # A test summary instead of full test output
 npm test 2>&1 | tail -n 20
 ```
-Paste the small result into Chat. You decide what's relevant, not the model wading through noise.
 
 Use tools to compress inputs : [rtk-ai](https://github.com/rtk-ai/rtk)
 
