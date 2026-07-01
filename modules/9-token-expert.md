@@ -1,4 +1,4 @@
-# Module 09 — Become a power-user 🔴
+# Module 09 — Become a Token Expert 🔴
 
 **Goal:** squeeze more value per token with filtering, collapsed tool output, and usage awareness.
 
