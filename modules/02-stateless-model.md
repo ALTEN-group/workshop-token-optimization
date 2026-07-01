@@ -28,8 +28,6 @@
    What was the secret word? Don't search the codebase.
    ```
 
-✅ A new session starts from zero. You should exploit this.
-
 ---
 
 ## Experiment 2 : Context grows every turn
@@ -38,8 +36,7 @@
 2. Then ask a follow-up: "now explain how a POST request flows to create a route."
 
 Notice the second answer implicitly re-includes everything from turn 1. In a long session this is how tokens **balloon**, every file and every prior answer rides along on each new turn.
-
-✅ Long sessions get expensive and noisier. Short, focused sessions stay sharp.
+Long sessions get expensive and noisier. Short, focused sessions stay sharp.
 
 ---
 

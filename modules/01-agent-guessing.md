@@ -31,7 +31,6 @@
 
 4. Look into the workshop service logs. Confirm the service starts properly.
 
-
 ---
 
 ## Part C : Compare
