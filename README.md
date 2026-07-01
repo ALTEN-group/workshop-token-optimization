@@ -3,7 +3,6 @@
 > [!NOTE]
 > Installing and running the project is not mandatory to follow this workshop.
 
-
 ## Run the sample app Docker
 
 To start the application and its services (PostgreSQL, Liquibase migration, Traefik, application) in development mode using Docker Compose:
@@ -35,8 +34,6 @@ npm i
 
 ---
 
-
-
 ## How to measure "quality" without raw token counts
 
 Throughout the labs you can use these **metrics** to make the abstract idea of "token value" concrete:
@@ -47,7 +44,6 @@ Throughout the labs you can use these **metrics** to make the abstract idea of "
 - **Guardrail signal** : did tests / lint / type-check pass on the first agent attempt?
 
 Lower numbers = higher token value. You'll record these in a simple scorecard in each module.
-
 
 ## The 5 levers at a glance
 
