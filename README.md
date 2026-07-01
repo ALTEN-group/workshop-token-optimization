@@ -1,7 +1,7 @@
 # Token Optimization Workshop
 
 > [!NOTE]
-> Installing and running the project is not mandatory to follow this workshop.
+> Running the project is not mandatory to follow this workshop.
 
 ## Run the sample app Docker
 
