@@ -28,7 +28,7 @@
    What was the secret word? Don't search the codebase.
    ```
 
-✅ Every new session starts from zero. That's a feature you should exploit.
+✅ A new session starts from zero. You should exploit this.
 
 ---
 

@@ -21,7 +21,6 @@ Paste the small result into Chat. You decide what's relevant, not the model wadi
 Use tools to compress inputs : [rtk-ai](https://github.com/rtk-ai/rtk)
 
 
-
 ---
 
 ## 2. Keep tool output lean (Agent mode)

@@ -1,4 +1,4 @@
-# VS Code · Module 00 — Setup & ROI Mindset 🟢
+# Module 00 — Setup & ROI Mindset 🟢
 
 **Goal:** get Copilot working in VS Code, run the sample app, and adopt the workshop's core principle before you write a single prompt.
 
