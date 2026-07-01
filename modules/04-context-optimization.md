@@ -42,6 +42,15 @@ You will usually see more drift and noise. Extra context is not free, it dilutes
 
 > Habit: **one task, one session.** When a task is done, reset.
 
+When a session gets long (and expensive), don't keep extending it:
+
+- Ask: `Summarize what we changed and the current state in 5 bullet points.`
+- Copy that summary, **start a new Chat**, and paste it as the seed. You have compressed a huge transcript into a few lines, a manual, high-leverage context reset.
+
+This directly fights "lost in the middle" and recency bias from long histories.
+
+> **`Compact Conversation` works here too.** Type `/compact` in the Chat input to compress the current conversation in place. Copilot also **auto-summarizes** older turns as a conversation grows. Use `compact` if you really need to keep working in the same session, and a **New Chat** seeded with a tight summary when you can.
+
 ---
 
 ## How to pick the minimal set (heuristic)

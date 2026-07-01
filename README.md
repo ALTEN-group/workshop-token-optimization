@@ -31,7 +31,7 @@ npm i
 | 06  | [Lever 4 : Workflow](modules/06-workflow.md) | Research → Plan → Implement                   | 🟡    |
 | 07  | [Lever 5 : Deterministic controls](modules/07-deterministic-controls.md) | Tests, linters, security gates                | 🟡    |
 | 08  | [Lever 6 : Persistent context](modules/08-persistent-context.md) | Instructions, agents, skills, MCP, sub-agents | 🔴    |
-| 09  | [Power-user tips](modules/09-power-user.md) | Scripting, filtering, usage analysis          | 🔴    |
+| 09  | [Become a Power-User](modules/09-power-user.md) | Scripting, filtering, usage analysis          | 🔴    |
 
 ---
 

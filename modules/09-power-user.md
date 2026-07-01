@@ -10,7 +10,7 @@
 
 Don't make the agent read a file to find one thing. Pre-filter then paste only the result.
 
-Examples (VS Code terminal):
+Examples (terminal):
 
 ```bash
 # A test summary instead of full test output
@@ -20,10 +20,9 @@ Paste the small result into Chat. You decide what's relevant, not the model wadi
 
 Use tools to compress inputs : [rtk-ai](https://github.com/rtk-ai/rtk)
 
-
 ---
 
-## 2. Keep tool output lean (Agent mode)
+## 2. Keep tool output lean
 
 When the agent runs commands, **noisy output is tokens**. Prefer commands that emit only what's needed:
 
@@ -37,20 +36,7 @@ Ask the agent in your prompt to "run the quietest command you created."
 
 ---
 
-## 3. Collapse / summarize long sessions
-
-When a session gets long (and expensive), don't keep extending it:
-
-- Ask: `Summarize what we changed and the current state in 5 bullet points.`
-- Copy that summary, **start a new Chat**, and paste it as the seed. You have compressed a huge transcript into a few lines, a manual, high-leverage context reset.
-
-This directly fights "lost in the middle" and recency bias from long histories.
-
-> **`Compact Conversation` works here too.** Type `/compact` in the Chat input to compress the current conversation in place. Copilot also **auto-summarizes** older turns as a conversation grows. Use `compact` if you really need to keep working in the same session, and a **New Chat** seeded with a tight summary when you can.
-
----
-
-## 4. Analyze your own usage patterns
+## 3. Analyze your own usage patterns
 
 Reflect on the scorecards you have collected:
 
