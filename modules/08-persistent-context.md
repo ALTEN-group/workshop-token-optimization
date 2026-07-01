@@ -135,4 +135,4 @@ Do read-only exploration in a sub-agent first; after it returns, propose the sma
 
 The sample app has concise persistent instructions, you have built a reusable custom agent, and you understand when skills, MCP tools, and sub-agents add value vs. add noise.
 
-➡️ Next: [09 — Power-user tips](09-power-user-tips.md)
+➡️ Next: [09 — Power-user tips](09-power-user.md)
