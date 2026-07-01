@@ -12,6 +12,12 @@ To start the application and its services (PostgreSQL, Liquibase migration, Trae
 docker compose --env-file docker/conf/.env.dev -f docker/docker-compose.yml up --build -d
 ```
 
+If you cannot launch the app in Docker, at least install the dependencies in your local environment so you can test the LLMs correct outputs :
+
+```sh
+npm i
+```
+
 ## Modules
 
 | #   | Module                           | Concept                                       | Level |
