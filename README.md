@@ -19,18 +19,18 @@ npm i
 
 ## Modules
 
-| #   | Module                           | Level |
-| --- | -------------------------------- | ----- |
-| 00  | [ROI mindset](modules/00-setup.md) | 🟢    |
-| 01  | [Agent guessing](modules/01-agent-guessing.md) | 🟢    |
-| 02  | [Stateless model](modules/02-stateless-model.md) | 🟢    |
-| 03  | [Lever 1 : Model selection](modules/03-model-selection.md) | 🟡    |
-| 04  | [Lever 2 : Context optimization](modules/04-context-optimization.md) | 🟡    |
-| 05  | [Lever 3 : Prompt engineering](modules/05-prompt-engineering.md) | 🟡    |
-| 06  | [Lever 4 : Workflow](modules/06-workflow.md) | 🟡    |
-| 07  | [Lever 5 : Deterministic controls](modules/07-deterministic-controls.md) | 🟡    |
-| 08  | [Lever 6 : Persistent context](modules/08-persistent-context.md) | 🔴    |
-| 09  | [Become a Power-User](modules/09-power-user.md) | 🔴    |
+| #  | Module                           | Level |
+| -- | -------------------------------- | ----- |
+| 0  | [ROI mindset](modules/00-setup.md) | 🟢    |
+| 1  | [Agent guessing](modules/01-agent-guessing.md) | 🟢    |
+| 2  | [Stateless model](modules/02-stateless-model.md) | 🟢    |
+| 3  | [Lever 1 : Model selection](modules/03-model-selection.md) | 🟡    |
+| 4  | [Lever 2 : Context optimization](modules/04-context-optimization.md) | 🟡    |
+| 5  | [Lever 3 : Prompt engineering](modules/05-prompt-engineering.md) | 🟡    |
+| 6  | [Lever 4 : Workflow](modules/06-workflow.md) | 🟡    |
+| 7  | [Lever 5 : Deterministic controls](modules/07-deterministic-controls.md) | 🟡    |
+| 8  | [Lever 6 : Persistent context](modules/08-persistent-context.md) | 🔴    |
+| 9  | [Become a Power-User](modules/09-power-user.md) | 🔴    |
 
 ---
 
