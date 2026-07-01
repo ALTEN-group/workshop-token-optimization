@@ -52,28 +52,3 @@ Lower numbers = higher token value. You'll record these in a simple scorecard in
 4. Workflow design       → Think → Plan → Implement (separate, clean contexts)
 5. Deterministic control → tests · linters · security checks to stop compounding errors
 ```
-
-
-## A note on Chat modes
-
-| Mode | Use it for |
-| --- | --- |
-| **Ask** | Questions, research, explanations — no file edits |
-| **Plan** | Planning: produces a plan/checklist, no code changes |
-| **Agent** | Multi-step autonomous work: reads files, edits, runs tasks |
-
-Choosing the right mode is itself an optimization: Ask/Plan for thinking, Agent for doing.
-
----
-
-## VS Code essentials you'll use throughout
-
-| Action | How |
-| --- | --- |
-| Open the Chat view | `Ctrl+Alt+I` / `⌃⌘I` |
-| Switch mode | mode dropdown: Ask · Plan · Agent |
-| Pick a model | model picker in the Chat input box |
-| Add a file to context | type `#` and pick the file |
-| Clear/reset context | start a new Chat session |
-| Run a command | VS Code terminal (`` Ctrl+` ``) |
-| Track your usage | review token / AI credit consumption after each step |
