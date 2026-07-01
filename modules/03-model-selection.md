@@ -4,13 +4,15 @@
 
 > **Rule of thumb:** large = planning/debugging · medium = implementation · small = simple tasks · **Auto by default**.
 
-[GitHub's model comparison page](https://docs.github.com/en/copilot/reference/ai-models/model-comparison):
-
 - **Deep reasoning/debugging (large):** `GPT-5.5`, `GPT-5.4`, `Claude Opus 4.7`, `Gemini 2.5 Pro`
 - **General implementation (medium):** `GPT-5 mini`, `GPT-4.1`, `Claude Sonnet 4.6`
 - **Simple/repetitive tasks (small/fast):** `Claude Haiku 4.5`, `Gemini 3 Flash`
 
 Pick one available in your org/plan. If a model isn't available, choose the closest option in the same category.
+
+more info here : 
+- [GitHub's model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison)
+- [GitHub's model pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 
 ---
 
