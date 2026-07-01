@@ -8,22 +8,19 @@
 
 ## 1. Filter data *before* it enters the context
 
-Don't make the agent read a giant file to find one thing. Pre-filter in the terminal, then paste only the result.
+Don't make the agent read a file to find one thing. Pre-filter then paste only the result.
 
 Examples (VS Code terminal):
 
 ```bash
-# Only the lines that matter, instead of the whole file
-grep -n "RegExp" src/**/*.js
-
-# Just the dependency names, not the whole package.json
-node -p "Object.keys(require('./package.json').dependencies)"
-
-# A test summary instead of full output
+# A test summary instead of full test output
 npm test 2>&1 | tail -n 20
 ```
-
 Paste the small result into Chat. You decide what's relevant, not the model wading through noise.
+
+Use tools to compress inputs : [rtk-ai](https://github.com/rtk-ai/rtk)
+
+
 
 ---
 
@@ -37,7 +34,7 @@ When the agent runs commands, **noisy output is tokens**. Prefer commands that e
 | `cat bigfile.js` | `sed -n '40,80p' bigfile.js` |
 | `ls -R` | `git ls-files src` |
 
-Ask the agent in your prompt to "run the quietest command that proves it works."
+Ask the agent in your prompt to "run the quietest command you created."
 
 ---
 
@@ -50,7 +47,7 @@ When a session gets long (and expensive), don't keep extending it:
 
 This directly fights "lost in the middle" and recency bias from long histories.
 
-> **`/compact` works here too.** Type `/compact` in the Chat input to compress the current conversation in place. Copilot also **auto-summarizes** older turns as a conversation grows. Use `/compact` to keep working the same task cheaply, and a **New Chat** (`+`) seeded with a tight summary when you are starting something unrelated.
+> **`Compact Conversation` works here too.** Type `/compact` in the Chat input to compress the current conversation in place. Copilot also **auto-summarizes** older turns as a conversation grows. Use `compact` if you really need to keep working in the same session, and a **New Chat** seeded with a tight summary when you can.
 
 ---
 
@@ -63,28 +60,6 @@ Reflect on the scorecards you have collected:
 - Which guardrail caught the most agent mistakes?
 
 Turn recurring fixes into **persistent instructions or skills** so you never pay for that lesson twice.
-
----
-
-## 5. Bundle the guardrail into prompts
-
-Ensure every implementation prompt concludes with verification checks, e.g.:
-
-```text
-Implement <change> in src. Done when `npm run build`, `npm test` and `npm run lint` pass.
-```
-
-This is Lever 5 (deterministic controls) wired straight into your prompt loop.
-
----
-
-## 6. Right tool, right mode
-
-- **Ask** for thinking; **Agent** for doing. Don't burn Agent turns on a question.
-- Reach for a big model only when reasoning is genuinely hard.
-- Reset early and often.
-
----
 
 ## Expected outcome
 
