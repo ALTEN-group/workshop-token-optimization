@@ -1,12 +1,12 @@
 # Module 02 — Stateless model 🟢
 
-**Goal:** internalize the model is **stateless** and that the **context window** has biases, then observe both directly in VS Code.
+**Goal:** internalize the model is **stateless** and that the **context window** has biases, then observe both directly.
 
 ---
 
 ## Key facts
 
-- An LLM is a **probabilistic text engine**, it predicts likely next tokens.
+- A LLM is a **probabilistic text engine**, it predicts likely next tokens.
 - It is **stateless**: no memory between calls. The **entire context is re-sent every step**.
 - The context window has two biases:
   - **Lost in the middle** : info in the middle of a long context is often ignored.
@@ -28,7 +28,7 @@
    What was the secret word? Don't search the codebase.
    ```
 
-✅ Takeaway: every new session starts from zero. That's a feature you should exploit.
+✅ Every new session starts from zero. That's a feature you should exploit.
 
 ---
 
@@ -39,7 +39,7 @@
 
 Notice the second answer implicitly re-includes everything from turn 1. In a long session this is how tokens **balloon**, every file and every prior answer rides along on each new turn.
 
-✅ Takeaway: long sessions get expensive and noisier. Short, focused sessions stay sharp.
+✅ Long sessions get expensive and noisier. Short, focused sessions stay sharp.
 
 ---
 

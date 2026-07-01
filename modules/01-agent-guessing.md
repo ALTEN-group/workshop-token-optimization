@@ -1,6 +1,6 @@
 # Module 01 — Agent Guessing 🟢
 
-**Goal:** *feel* the cost of the "agent gambling" anti-pattern by deliberately doing it, then doing it right, and compare.
+**Goal:** Test the cost of the "agent gambling" anti-pattern by deliberately doing it, then doing it right, and compare.
 
 ---
 
