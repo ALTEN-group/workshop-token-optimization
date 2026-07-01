@@ -1,24 +1,19 @@
 # Module 03 — Lever 1: Model Selection 🟡
 
-**Goal:** match model size to task difficulty using the VS Code **model picker**, and feel the tradeoff between capability, speed, and cost.
+**Goal:** match model size to task difficulty using the **model picker**, and feel the tradeoff between capability, speed, and cost.
 
 > **Rule of thumb:** large = planning/debugging · medium = implementation · small = simple tasks · **Auto by default**.
 
 - **Deep reasoning/debugging (large):** `GPT-5.5`, `GPT-5.4`, `Claude Opus 4.7`, `Gemini 2.5 Pro`
 - **General implementation (medium):** `GPT-5 mini`, `GPT-4.1`, `Claude Sonnet 4.6`
 - **Simple/repetitive tasks (small/fast):** `Claude Haiku 4.5`, `Gemini 3 Flash`
+- **Auto** lets Copilot route the request, a great default, but choosing deliberately is a skill worth practicing.
 
 Pick one available in your org/plan. If a model isn't available, choose the closest option in the same category.
 
-more info here : 
+More info here : 
 - [GitHub's model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison)
 - [GitHub's model pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
-
----
-
-## The model picker
-
-In the Chat input box there is a model dropdown. You will typically see **Auto** plus several named models of varying capability. **Auto** lets Copilot route the request, a great default, but choosing deliberately is a skill worth practicing.
 
 ---
 
@@ -34,7 +29,7 @@ The sample app's [`app.js`](../src/app.js) has a subtle correctness bug.
    Explain why the route resource fails to send data, and what the correct fix is.
    ```
 
-Record: did it pinpoint the wrong response middleware ? How clear was the reasoning?
+Did it pinpoint the wrong response middleware ? How clear and fast was the reasoning?
 
 ---
 

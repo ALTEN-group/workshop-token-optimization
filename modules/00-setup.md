@@ -1,4 +1,4 @@
-# Module 00 — Setup & ROI Mindset 🟢
+# Module 00 — ROI Mindset 🟢
 
 **Goal:** get Copilot working in VS Code, run the sample app, and adopt the workshop's core principle before you write a single prompt.
 
@@ -39,6 +39,6 @@ This 10-second habit is the highest-ROI thing in the whole workshop.
 ## Expected outcome
 
 - Copilot Chat works and you can switch modes/models.
-- Optional : The sample app builds, with exactly one intentional failing test.
+- Optional : The sample app builds, with one intentional failing test.
 
 ➡️ Next: [01 — Agent guessing](01-agent-guessing.md)
