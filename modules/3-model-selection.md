@@ -4,10 +4,10 @@
 
 > **Rule of thumb:** large = planning/debugging · medium = implementation · small = simple tasks · **Auto by default**.
 
-- **Deep reasoning/debugging (large):** `GPT-5.5`, `GPT-5.4`, `Claude Opus 4.7`, `Gemini 2.5 Pro`
-- **General implementation (medium):** `GPT-5 mini`, `GPT-4.1`, `Claude Sonnet 4.6`
-- **Simple/repetitive tasks (small/fast):** `Claude Haiku 4.5`, `Gemini 3 Flash`
-- **Auto** lets Copilot route the request, a great default, but choosing deliberately is a skill worth practicing.
+- **Deep reasoning/debugging:** `Claude Opus 4.8`, `Claude Sonnet 5`, `Gemini 2.5 Pro`
+- **General implementation:** `MAI Code 1 flash`, `GPT-4.1`, `Claude Sonnet 5`, `Gemini 3.5 Flash`
+- **Simple/repetitive tasks:** `MAI Code 1 flash`, `Claude Haiku 4.5`
+- **Auto** lets Copilot route the request, a good default, but choosing deliberately is a skill worth practicing and can make a big difference.
 
 Pick one available in your org/plan. If a model isn't available, choose the closest option in the same category.
 
