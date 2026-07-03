@@ -19,7 +19,7 @@ Example instead of npm test you can use a command that outputs only the last 20 
 npm test 2>&1 | tail -n 20
 ```
 
-Use tools to compress inputs : [rtk-ai](https://github.com/rtk-ai/rtk)
+Use tools to compress AI commands : [rtk-ai](https://github.com/rtk-ai/rtk)
 
 ---
 

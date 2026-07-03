@@ -70,4 +70,4 @@ You will usually get better compliance when the critical rule is at the **end** 
 (2) Context accumulates per turn
 (3) Placement within the window changes compliance. 
 
-➡️ Next: [03 — Lever 1: Model selection](03-model-selection.md)
+➡️ Next: [03 — Lever 1: Model selection](3-model-selection.md)
