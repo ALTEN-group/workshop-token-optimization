@@ -49,4 +49,4 @@ Part A fails partly because the agent has to *guess* several things in a row (wh
 
 An up-front investment in context + a stop condition beats retry-until-it-works on retries, turns and correctness.
 
-➡️ Next: [02 — Stateless model](02-stateless-model.md)
+➡️ Next: [02 — Stateless model](2-stateless-model.md)

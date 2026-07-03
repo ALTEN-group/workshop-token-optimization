@@ -13,7 +13,7 @@ Task: add input validation to `POST /route.js`.
 1. New Chat, **Agent** mode.
 2. Decide the minimal set. Which files matter? Likely:
    - [`src/services/route.js`](../src/services/route.js)
-   - [`src/validators/check-route-pattern.js`](../src/validators/check-route-pattern.js)
+   - [`src/middlewares/validators/check-route-pattern.js`](../src/middlewares/validators/check-route-pattern.js)
 3. Prompt:
 
    ```text
@@ -66,4 +66,4 @@ This directly fights "lost in the middle" and recency bias from long histories.
 
 You can assemble a minimal, relevant context for a real change, you have seen over-context hurt, and you have adopted the one-task-one-session reset habit.
 
-➡️ Next: [05 — Lever 3: Prompt engineering](05-prompt-engineering.md)
+➡️ Next: [05 — Lever 3: Prompt engineering](5-prompt-engineering.md)

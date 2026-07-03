@@ -71,4 +71,4 @@ That single clause makes the agent self-correct instead of handing you broken wo
 
 The sample app now has a linter, validation tests, and security checks instructions, and you have made "green checks" your default stop condition.
 
-➡️ Next: [08 — Persistent context](08-persistent-context.md)
+➡️ Next: [08 — Persistent context](8-persistent-context.md)

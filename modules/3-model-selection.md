@@ -66,4 +66,4 @@ Leave it on **Auto**. Reach for a specific model when you *know* the task is unu
 
 You've consciously matched two tasks to several model choices and can articulate why the right-sized model maximizes token value.
 
-➡️ Next: [04 — Lever 2: Context optimization](04-context-optimization.md)
+➡️ Next: [04 — Lever 2: Context optimization](4-context-optimization.md)

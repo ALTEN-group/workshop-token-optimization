@@ -69,4 +69,4 @@ The phased approach almost always produces cleaner diffs you can actually review
 
 You ran a real change through Think → Plan → Code with resets between phases, and you can explain how shorter, verified steps keep error from compounding.
 
-➡️ Next: [07 — Lever 5: Deterministic controls](07-deterministic-controls.md)
+➡️ Next: [07 — Lever 5: Deterministic controls](7-deterministic-controls.md)
