@@ -1,5 +1,7 @@
 # Token Optimization Workshop
 
+This workshop is the second part of a two-hour advanced training session on optimizing tokens for AI code assistants.
+
 > [!NOTE]
 > Running the project is not mandatory to follow this workshop.
 
