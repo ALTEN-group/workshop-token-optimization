@@ -35,6 +35,10 @@ When the agent runs commands, **noisy output is tokens**. Prefer commands that e
 
 Ask the agent in your prompt to "run the quietest command you created."
 
+
+- Use instructions to compress AI commands : [Coding Pal](https://github.com/ALTEN-group/coding-pal/blob/main/instructions/sharp-agent.instructions.md)
+- Make your AI coding agent talk like a caveman : [Caveman](https://github.com/juliusbrussee/caveman)
+
 ---
 
 ## 3. Analyze your own usage patterns
