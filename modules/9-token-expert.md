@@ -19,7 +19,8 @@ Example instead of npm test you can use a command that outputs only the last 20 
 npm test 2>&1 | tail -n 20
 ```
 
-Use tools to compress AI commands : [rtk-ai](https://github.com/rtk-ai/rtk)
+> 💡 **Useful Compression Tools**
+> ⚡ **[rtk-ai](https://github.com/rtk-ai/rtk)** — CLI tool to pre-filter and compress command output before sending to LLM context.
 
 ---
 
@@ -35,9 +36,9 @@ When the agent runs commands, **noisy output is tokens**. Prefer commands that e
 
 Ask the agent in your prompt to "run the quietest command you created."
 
-
-- Use instructions to compress AI commands : [Coding Pal](https://github.com/ALTEN-group/coding-pal/blob/main/instructions/sharp-agent.instructions.md)
-- Make your AI coding agent talk like a caveman : [Caveman](https://github.com/juliusbrussee/caveman)
+> 💡 **Useful Compression Tools**
+> - 🛠️ **[Coding Pal](https://github.com/ALTEN-group/coding-pal/blob/main/instructions/sharp-agent.instructions.md)** — Use specialized instructions to shorten AI outputs and avoid guessing.
+> - 🦴 **[Caveman](https://github.com/juliusbrussee/caveman)** — Force your AI coding agent to communicate in ultra-brief "caveman" talk to minimize output tokens.
 
 ---
 
