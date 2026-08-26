@@ -1,23 +1,25 @@
-# Module 03 — Lever 1: Model Selection 🟡
+# Module 3 — Lever 1: Model selection 🟡
 
 **Goal:** match model size to task difficulty using the **model picker**, and feel the tradeoff between capability, speed, and cost.
 
 > **Rule of thumb:** large = planning/debugging · medium = implementation · small = simple tasks · **Auto by default**.
 
-- **Deep reasoning/debugging:** `Claude Opus 4.8`, `Claude Sonnet 5`, `Gemini 2.5 Pro`
-- **General implementation:** `MAI Code 1 flash`, `GPT-4.1`, `Claude Sonnet 5`, `Gemini 3.5 Flash`
-- **Simple/repetitive tasks:** `MAI Code 1 flash`, `Claude Haiku 4.5`
-- **Auto** lets Copilot route the request, a good default, but choosing deliberately is a skill worth practicing and can make a big difference.
+Names rotate. Pick by **category** from whatever your org/plan lists today; confirm on [GitHub's model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison).
 
-Pick one available in your org/plan. If a model isn't available, choose the closest option in the same category.
+- **Deep reasoning/debugging:** e.g. `Claude Opus 4.8`, `Gemini 3.1 Pro`, `GPT-5.5` / `GPT-5.6 Sol`
+- **General implementation:** e.g. `Claude Sonnet 5`, `MAI-Code-1-Flash`, `GPT-5.6 Terra`
+- **Simple/repetitive tasks:** e.g. `Claude Haiku 4.5`, `Gemini 3.6 Flash`, `GPT-5.6 Luna`
+- **Auto** lets Copilot route the request. A good default, but choosing deliberately is a skill and can change cost a lot.
 
-More info here : 
+Put each model in **one** bucket. If a name is missing, take the closest option in the same category.
+
+More info:
 - [GitHub's model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison)
 - [GitHub's model pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 
 ---
 
-## Exercise A : A "planning/debugging" task (use a large model)
+## Exercise A: A "planning/debugging" task (use a large model)
 
 The sample app's [`app.js`](../src/app.js) has a subtle correctness bug.
 
@@ -29,25 +31,27 @@ The sample app's [`app.js`](../src/app.js) has a subtle correctness bug.
    Explain why the route resource fails to send data, and what the correct fix is.
    ```
 
-Did it pinpoint the wrong response middleware ? How clear and fast was the reasoning?
+Did it pinpoint the wrong response middleware (`send204` instead of `send`)? How clear and fast was the reasoning?
 
 ---
 
-## Exercise B : A "simple" task (use a small/fast model)
+## Exercise B: A "simple" task (use a small/fast model)
 
 1. New Chat, **Agent** mode, pick a **smaller/faster** model.
 2. Add [`app.js`](../src/app.js).
 3. Prompt:
 
    ```text
-   Change the correct response in "route" route. Nothing else.
+   In src/app.js, the routes mount uses send204. Switch it to send from
+   src/middlewares/res/send.js so POST /routes can return JSON { rows, total }.
+   Change nothing else.
    ```
 
 A small model is perfectly capable of a one-line mechanical edit, and is cheaper/faster.
 
 ---
 
-## Exercise C : Compare
+## Exercise C: Compare
 
 Repeat Exercise A's *diagnosis* with a small model, and Exercise B's *one-liner* with a large model. 
 
@@ -66,4 +70,4 @@ Leave it on **Auto**. Reach for a specific model when you *know* the task is unu
 
 You've consciously matched two tasks to several model choices and can articulate why the right-sized model maximizes token value.
 
-➡️ Next: [04 — Lever 2: Context optimization](4-context-optimization.md)
+➡️ Next: [4 — Lever 2: Context optimization](4-context-optimization.md)

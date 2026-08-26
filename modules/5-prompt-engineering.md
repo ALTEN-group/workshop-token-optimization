@@ -1,4 +1,4 @@
-# Module 05 — Lever 3: Prompt Engineering 🟡
+# Module 5 — Lever 3: Prompt engineering 🟡
 
 **Goal:** turn vague asks into **precise prompts with explicit context and stop conditions**.
 
@@ -19,7 +19,7 @@ A **stop condition** is the single biggest upgrade most people can make. It stop
 
 ---
 
-## Exercise A : Rewrite a weak prompt
+## Exercise A: Rewrite a weak prompt
 
 Weak prompt:
 
@@ -27,20 +27,23 @@ Weak prompt:
 make the search better
 ```
 
-Rewrite it for the `GET /route/search` endpoint in [`route.js`](../src/routes/route.js).
+Rewrite it for `POST /routes/search` in [`src/routes/route.js`](../src/routes/route.js). Add that file and [`src/entities/route.js`](../src/entities/route.js). Do **not** add `node_modules`.
 
+Example that follows the anatomy above:
 
 ```text
-In src/routes/route.js, the GET /route/search endpoint does nothing.
-Look into node_modules @dwtechs/antity-pgsql library and use it to handle the search functionality with filter capabilities.
-
+INTENT: Make POST /routes/search run a filtered select, same pattern as POST /routes.
+CONTEXT: src/routes/route.js currently uses send204 on /search. Use rEnt from
+src/entities/route.js and @dwtechs/antity-pgsql the way addArraySubstack does.
+CONSTRAINTS: Do not change POST /, PUT /, or /archive. Do not open node_modules.
+DONE WHEN: POST /routes/search performs a filtered query and you list the files you changed.
 ```
 
-Run it (Agent mode, add only `route.js`).
+Run it (Agent mode).
 
 ---
 
-## Exercise B : Stop conditions prevent scope creep
+## Exercise B: Stop conditions prevent scope creep
 
 1. New Chat, **Agent** mode. Add [`route.js`](../src/routes/route.js).
 2. Prompt **without** a stop condition:
@@ -62,7 +65,7 @@ Compare scope, edits, and your correction effort.
 
 ---
 
-## Exercise C : Make context explicit, not assumed
+## Exercise C: Make context explicit, not assumed
 
 Instead of "you know the conventions", state them:
 
@@ -88,4 +91,4 @@ Notice the model cannot read your mind or your team wiki, explicit beats implici
 
 You can convert vague requests into precise, bounded prompts, and you have seen stop conditions visibly shrink scope creep and rework.
 
-➡️ Next: [06 — Lever 4: Workflow](6-workflow.md)
+➡️ Next: [6 — Lever 4: Workflow](6-workflow.md)
