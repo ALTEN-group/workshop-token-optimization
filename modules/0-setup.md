@@ -19,12 +19,13 @@
 
 Before each task in this workshop, pause and ask:
 
-1. **What is the smallest correct context** for this task? (not the whole repo)
-2. **What does "done" look like?** (a stop condition the agent can check)
-3. **Which model** fits the difficulty?
-4. **Can a test/lint verify it** instead of me eyeballing the output?
+1. **Is there an existing prompt or agent** I could use for this task
+2. **What is the smallest correct context** for this task? (not the whole repo)
+3. **What does "done" look like?** (a stop condition the agent can check)
+4. **Which model** fits the difficulty
+5. **Can a test/lint verify it** instead of me eyeballing the output
 
-This 10-second habit is the highest-ROI thing in the whole workshop.
+This 10-seconds habit is the highest-ROI thing in the whole workshop.
 
 ---
 
