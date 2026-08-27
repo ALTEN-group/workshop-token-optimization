@@ -62,7 +62,7 @@ Using a big model for a one-liner wastes value; using a tiny model for a gnarly 
 
 ## When in doubt
 
-Leave it on **Auto**. Reach for a specific model when you *know* the task is unusually hard (reasoning/planning/debugging) or unusually trivial (rename, format, one-line change).
+Don’t rely on Auto. Test models to understand which tasks they handles best.
 
 ---
 
