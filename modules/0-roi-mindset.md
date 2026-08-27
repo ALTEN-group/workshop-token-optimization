@@ -4,13 +4,13 @@
 
 > Better quality → fewer retries → lower total cost.
 
-This workshop is written for **GitHub Copilot in VS Code**. If you are in Cursor, use Chat with Ask / Plan / Agent; keybindings and command names differ (noted where it matters).
+This workshop is written for **GitHub Copilot in VS Code**.
 
 ---
 
 ## 1. Verify Copilot
 
-1. Open the Chat view: `Ctrl+Alt+I` (Windows/Linux) or `⌃⌘I` (macOS). In Cursor, open Chat from the sidebar or Command Palette.
+1. Open the Chat view: `Ctrl+Alt+I` (Windows/Linux) or `⌃⌘I` (macOS).
 2. Confirm you can see:
    - the **mode** dropdown: **Ask · Plan · Agent**
    - the **model picker**

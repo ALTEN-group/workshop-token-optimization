@@ -39,7 +39,7 @@ Agent mode can write files, so it saves `THINK.md` directly, the "Don't change s
 
 Agent mode writes `PLAN.md` for you while the instruction keeps it from touching the app. Review `PLAN.md` before spending tokens on implementation, it's cheap to fix a list, expensive to redo code.
 
-> **Note:** VS Code Copilot also has a dedicated **Plan** mode that stays read-only automatically (no "don't change code" reminder needed), but it renders the plan in chat rather than writing a file. Cursor's Plan mode is the same idea. We use **Agent** mode in all three phases here so you learn Think → Plan → Implement with durable `THINK.md`/`PLAN.md` artifacts. Once the pattern is second nature, use Plan mode for phases 1 and 2 with less ceremony.
+> **Note:** VS Code Copilot also has a dedicated **Plan** mode that stays read-only automatically (no "don't change code" reminder needed), but it renders the plan in chat rather than writing a file. We use **Agent** mode in all three phases here so you learn Think → Plan → Implement with durable `THINK.md`/`PLAN.md` artifacts. Once the pattern is second nature, use Plan mode for phases 1 and 2 with less ceremony.
 
 ---
 

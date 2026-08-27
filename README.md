@@ -43,7 +43,7 @@ Throughout the labs you can use these **metrics** to make the abstract idea of "
 - **Retries to success:** how many times you had to re-prompt before the result was correct.
 - **Turns / tool calls:** how many round-trips the agent took.
 - **Correction edits:** how many manual fixes you made afterward.
-- **Guardrail signal:** did the process still start (modules 0–6), or did `npm test` / `npm run lint` pass (from module 7 on)?
+- **Guardrail signal:** did the process still start, or did `npm test` / `npm run lint` pass.
 
 Lower numbers = higher token value. Use these as a mental check after each lab; you do not need to write them down.
 

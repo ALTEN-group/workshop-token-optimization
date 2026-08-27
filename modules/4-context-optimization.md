@@ -49,7 +49,7 @@ When a session gets long (and expensive), don't keep extending it:
 
 This directly fights "lost in the middle" and recency bias from long histories.
 
-> **Compact conversation.** In Copilot Chat, type `/compact` to compress the current conversation in place (Copilot also auto-summarizes older turns). In Cursor, use a **New Chat** seeded with a tight summary — that is the same high-leverage reset. Prefer a new chat when you can.
+> **Compact conversation.** In Copilot Chat, type `/compact` to compress the current conversation in place. Copilot also auto-summarizes older turns. Prefer a new chat when you can.
 
 ---
 

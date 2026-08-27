@@ -53,4 +53,4 @@ Turn recurring fixes into **persistent instructions or skills** so you never pay
 
 ## Expected outcome
 
-You can pre-filter inputs, keep tool output and sessions lean, compress context with Copilot `/compact` or a Cursor new-chat summary before it bloats, review chat history for recurring fixes, and improve your defaults.
+You can pre-filter inputs, keep tool output and sessions lean, compress context with Copilot `/compact` before it bloats, review chat history for recurring fixes, and improve your defaults.

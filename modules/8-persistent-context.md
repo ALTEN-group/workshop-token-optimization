@@ -34,7 +34,7 @@ Example prompt to try:
 
 Create a focused agent that locks in repeatable behavior, including token discipline. Example: a tiny `tdd-fixer` agent for bounded, test-driven bug fixes.
 
-1. Command Palette → **Chat: New Custom Agent** (VS Code Copilot). In Cursor, create a custom agent or a project rule with the same content.
+1. Command Palette → **Chat: New Custom Agent** (VS Code Copilot).
 2. Create one named `tdd-fixer` with content like:
 
 ```md
