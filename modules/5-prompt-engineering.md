@@ -11,7 +11,7 @@
 ```text
 [INTENT]  What you want, in one sentence.
 [CONTEXT]      Which files/facts matter.
-[CONSTRAINTS]  What NOT to touch; rules to follow.
+[CONSTRAINTS]  What NOT to do; rules to follow.
 [DONE WHEN]    The stop condition the agent can verify.
 ```
 
@@ -27,7 +27,7 @@ Weak prompt:
 make the search better
 ```
 
-Rewrite it for `POST /routes/search` in [`src/routes/route.js`](../src/routes/route.js). Add that file and [`src/entities/route.js`](../src/entities/route.js). Do **not** add `node_modules`.
+Rewrite it for `POST /routes/search` in [`src/routes/route.js`](../src/routes/route.js). Add that file and [`src/entities/route.js`](../src/entities/route.js). Do **not** add new library.
 
 Example that follows the anatomy above:
 
@@ -35,11 +35,11 @@ Example that follows the anatomy above:
 INTENT: Make POST /routes/search run a filtered select, same pattern as POST /routes.
 CONTEXT: src/routes/route.js currently uses send204 on /search. Use rEnt from
 src/entities/route.js and @dwtechs/antity-pgsql the way addArraySubstack does.
-CONSTRAINTS: Do not change POST /, PUT /, or /archive. Do not open node_modules.
-DONE WHEN: POST /routes/search performs a filtered query and you list the files you changed.
+CONSTRAINTS: Do not change other routes. Do not add new library.
+DONE WHEN: POST /routes/search performs a filtered query.
 ```
 
-Run it (Agent mode).
+Run it in agent mode.
 
 ---
 
@@ -71,7 +71,7 @@ Instead of "you know the conventions", state them:
 
 ```text
 Follow these rules: use 2-space indentation; prefer `const`; use `@ts-check`; functions return
-values rather than throwing for expected cases.
+values. Throwing only for unexpected failures.
 ```
 
 Notice the model cannot read your mind or your team wiki, explicit beats implicit every time.

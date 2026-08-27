@@ -27,7 +27,7 @@ When the agent runs commands, **noisy output is tokens**. Prefer commands that e
 
 | Noisy | Lean |
 | --- | --- |
-| `npm test` (full log) | `npm test 2>&1 | tail -n 20` |
+| `npm test` (full log) | npm test 2>&1 | tail -n 20` |
 | `cat bigfile.js` | `sed -n '40,80p' bigfile.js` |
 | `ls -R` | `git ls-files src` |
 
@@ -35,13 +35,13 @@ Ask the agent in your prompt to "run the quietest command you created."
 
 Useful extras (optional):
 
-- [rtk-ai](https://github.com/rtk-ai/rtk) — pre-filter and compress command output before it enters the LLM context.
 - [Coding Pal sharp-agent instructions](https://github.com/ALTEN-group/coding-pal/blob/main/instructions/sharp-agent.instructions.md) — shorten outputs and avoid guessing.
+- [rtk-ai](https://github.com/rtk-ai/rtk) — pre-filter and compress command output before it enters the LLM context.
 - [Caveman](https://github.com/juliusbrussee/caveman) — keep agent replies extremely brief.
 
 ---
 
-## 3. Analyze your own usage patterns
+## 3. Analyze your usage patterns and improve
 
 Reflect on the labs you just ran:
 

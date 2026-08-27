@@ -25,7 +25,7 @@ The sample app has **no ESLint config** and **no `lint` script**. Jest is named 
 
 3. Run `npm run lint`. Fix or triage what it flags (with the agent's help).
 
-You just gave every future agent task a new automatic check.
+You’ve given every future agent task a reliable way to verify its changes.
 
 ---
 
@@ -44,24 +44,6 @@ Labs are **cumulative**. Module 4 attached `checkRoutePattern` to `POST /routes`
 
 ---
 
-## Exercise C: Enable the ReDoS guardrail
-
-`check-route-pattern.js` already detects nested-quantifier (ReDoS) patterns and invalid regexes. The `return next({ statusCode: 400, ... })` branches may still be commented out after module 4, or they may already be live.
-
-1. New Chat, **Agent** mode. Add [`src/middlewares/validators/check-route-pattern.js`](../src/middlewares/validators/check-route-pattern.js).
-2. Prompt:
-
-   ```text
-   In src/middlewares/validators/check-route-pattern.js, enable the ReDoS and
-   invalid-regex 400 responses if they are still commented out. Do not add a
-   new security-instructions file. Done when invalid nested-quantifier patterns
-   and uncompilable regexes return HTTP 400.
-   ```
-
-3. Confirm against the existing `POST /routes` / `PUT /routes` validator, not a new endpoint.
-
----
-
 ## Wire guardrails into your loop
 
 From now on, end implementation prompts with a verifiable check, e.g.:
@@ -76,6 +58,6 @@ That single clause makes the agent self-correct instead of handing you broken wo
 
 ## Expected outcome
 
-The sample app now has a linter, validation tests, and an enabled ReDoS/invalid-regex check, and you have made "green checks" your default stop condition.
+The sample app now has a linter and validation tests and you have made "green checks" your default stop condition.
 
 ➡️ Next: [8 — Persistent context](8-persistent-context.md)
