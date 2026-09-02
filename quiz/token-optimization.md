@@ -1,19 +1,19 @@
 # Token Optimization quiz
 
-11 questions from `workshop-token-optimization.pptx`.
+10 questions from `workshop-token-optimization.pptx`.
 
 ## 1.
 
 What distinguishes an AI Engineer from an AI-assisted engineer ?
 
-- A. The AI Engineer no longer writes code;
+- A. The AI Engineer no longer writes code
 - B. The AI Engineer uses only reasoning models
-- C. the AI Engineer orchestrates multiple agents. The AI-assisted engineer works with one agent at a time
+- C. The AI Engineer orchestrates multiple agents. The AI-assisted engineer works with one agent at a time
 - D. There is no distinction
 
 ## 2.
 
-What is the ROI goal ?
+What is the main objective of ROI optimization ?
 
 - A. Maximize tokens so the model stays “warm”
 - B. Increase output quality while reducing token consumption
@@ -52,13 +52,13 @@ How to prompt correctly ?
 What is the session rule of thumb ?
 
 - A. One long session for the whole day so cache hits stay high
-- B. One session per topic or task; start a fresh one when it grows too big; compact only with caution because it can drop useful detail
+- B. One session per topic or task; start a fresh one when it grows too big; compact with caution
 - C. Always compact before every prompt
 - D. Never start a new session; reuse the previous one’s hidden state
 
 ## 7.
 
-What is true of cached input tokens?
+Which statement about cached input tokens is correct ?
 
 - A. They are billed at zero and always applied
 - B. They replace output tokens after the first loop
@@ -67,7 +67,7 @@ What is true of cached input tokens?
 
 ## 8.
 
-Once the context window is growing, what bias does the deck warn about?
+Once the context window is growing, what bias does the deck warn about ?
 
 - A. The model equally weights every token in the window
 - B. Recency bias: attention shifts to the end of the context; the middle and oldest tokens get lost
@@ -76,7 +76,7 @@ Once the context window is growing, what bias does the deck warn about?
 
 ## 9.
 
-How should you fight compound error?
+How should you fight compound error ?
 
 - A. One large autonomous change with no tests, then a debug session
 - B. Small increments with deterministic controls (test/lint) and a clear stop after each change
