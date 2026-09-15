@@ -91,4 +91,4 @@ Notice the model cannot read your mind or your team wiki, explicit beats implici
 
 You can convert vague requests into precise, bounded prompts, and you have seen stop conditions visibly shrink scope creep and rework.
 
-➡️ Next: [6 — Lever 4: Workflow](6-workflow.md)
+➡️ Next: [6 — Lever 4: Advanced Workflow](6-advanced-workflow.md)

@@ -29,7 +29,7 @@ npm i
 | 3  | [Lever 1: Model selection](modules/3-model-selection.md) | 🟡    |
 | 4  | [Lever 2: Context optimization](modules/4-context-optimization.md) | 🟡    |
 | 5  | [Lever 3: Prompt engineering](modules/5-prompt-engineering.md) | 🟡    |
-| 6  | [Lever 4: Workflow](modules/6-workflow.md) | 🟡    |
+| 6  | [Lever 4: Advanced Workflow](modules/6-advanced-workflow.md) | 🟡    |
 | 7  | [Lever 5: Deterministic controls](modules/7-deterministic-controls.md) | 🟡    |
 | 8  | [Lever 6: Persistent context](modules/8-persistent-context.md) | 🔴    |
 | 9  | [Become a Token expert](modules/9-token-expert.md) | 🔴    |
@@ -53,7 +53,7 @@ Lower numbers = higher token value. Use these as a mental check after each lab; 
 1. Model selection        → large = plan/debug · medium = implement · small = trivial · Auto by default
 2. Context optimization   → only relevant files · reset sessions often
 3. Prompt engineering     → be precise · add stop conditions · supply context explicitly
-4. Workflow design        → Think → Plan → Implement (separate, clean contexts)
+4. Advanced workflow      → Think → Plan → Implement (separate, clean contexts)
 5. Deterministic control  → tests · linters · security checks to stop compounding errors
 6. Persistent context     → instructions · agents · skills · MCP · sub-agents (repeatable, not re-explained)
 ```

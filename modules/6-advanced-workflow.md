@@ -1,4 +1,4 @@
-# Module 6 — Lever 4: Workflow 🟡
+# Module 6 — Lever 4: Advanced Workflow 🟡
 
 **Goal:** split a non-trivial change into **think → Plan → Code**, each with its own clean context, and see why this beats one-shot "do everything."
 
