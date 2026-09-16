@@ -70,4 +70,4 @@ Don’t rely on Auto. Test models to understand which tasks they handles best.
 
 You've consciously matched two tasks to several model choices and can articulate why the right-sized model maximizes token value.
 
-➡️ Next: [4 — Lever 2: Context optimization](4-context-optimization.md)
+➡️ Next: [4 — Lever 3: Prompt engineering](4-prompt-engineering.md)
