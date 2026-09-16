@@ -62,4 +62,4 @@ This 10-second habit is the highest-ROI thing in the whole workshop.
 - Copilot Chat works and you can switch modes/models.
 - Optional: Docker is up, or `npm i` succeeded. You may already see the module 1 startup error in the workshop service logs.
 
-➡️ Next: [1 — Agent guessing](1-agent-guessing.md)
+➡️ Next: [1 — Model selection](1-model-selection.md)

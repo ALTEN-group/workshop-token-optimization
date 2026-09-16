@@ -1,4 +1,4 @@
-# Module 8 — Lever 6: Persistent context 🔴
+# Module 8 — Persistent context 🔴
 
 **Goal:** make quality **repeatable** with persistent instructions, custom agents, skills, MCP tools, and sub-agents, so you don't re-explain context every session.
 

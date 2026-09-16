@@ -1,4 +1,4 @@
-# Module 5 — Lever 2: Context optimization 🟡
+# Module 5 — Context optimization 🟡
 
 **Goal:** practice giving the agent **only the relevant files**, and use session resets to keep context clean.
 
@@ -66,4 +66,4 @@ This directly fights "lost in the middle" and recency bias from long histories.
 
 You can assemble a minimal, relevant context for a real change, you have seen over-context hurt, and you have adopted the one-task-one-session reset habit.
 
-➡️ Next: [6 — Lever 4: Advanced Workflow](6-advanced-workflow.md)
+➡️ Next: [6 — Deterministic controls](6-deterministic-controls.md)

@@ -1,4 +1,4 @@
-# Module 3 — Lever 1: Model selection 🟡
+# Module 1 — Model selection 🟡
 
 **Goal:** match model size to task difficulty using the **model picker**, and feel the tradeoff between capability, speed, and cost.
 
@@ -70,4 +70,4 @@ Don’t rely on Auto. Test models to understand which tasks they handles best.
 
 You've consciously matched two tasks to several model choices and can articulate why the right-sized model maximizes token value.
 
-➡️ Next: [4 — Lever 3: Prompt engineering](4-prompt-engineering.md)
+➡️ Next: [2 — Agent guessing](2-agent-guessing.md)

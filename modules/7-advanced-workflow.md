@@ -1,4 +1,4 @@
-# Module 6 — Lever 4: Advanced Workflow 🟡
+# Module 7 — Advanced Workflow 🟡
 
 **Goal:** split a non-trivial change into **think → Plan → Code**, each with its own clean context, and see why this beats one-shot "do everything."
 
@@ -8,7 +8,7 @@
 
 ## The task
 
-Add `POST /roles` to create a roles resource, following the same layering as `POST /routes` (router, service, entity, SQL if needed). Keep the app booting after every step. There is no test suite yet (that arrives in module 7).
+Add `POST /roles` to create a roles resource, following the same layering as `POST /routes` (router, service, entity, SQL if needed). Keep the app booting after every step. There is no test suite yet (that arrives in module 6).
 
 Do **not** also refactor the existing routes stack. One change, three phases.
 
@@ -76,4 +76,4 @@ Compare diffs, surprises, and how much you had to steer. The phased approach alm
 
 You ran a real change through Think → Plan → Code with resets between phases, and you can explain how shorter, verified steps keep error from compounding.
 
-➡️ Next: [7 — Lever 5: Deterministic controls](7-deterministic-controls.md)
+➡️ Next: [8 — Persistent context](8-persistent-context.md)

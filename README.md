@@ -24,14 +24,14 @@ npm i
 | #  | Module                           | Level |
 | -- | -------------------------------- | ----- |
 | 0  | [ROI mindset](modules/0-roi-mindset.md) | 🟢    |
-| 1  | [Agent guessing](modules/1-agent-guessing.md) | 🟢    |
-| 2  | [Stateless model](modules/2-stateless-model.md) | 🟢    |
-| 3  | [Lever 1: Model selection](modules/3-model-selection.md) | 🟡    |
-| 4  | [Lever 2: Prompt engineering](modules/4-prompt-engineering.md) | 🟡    |
-| 5  | [Lever 3: Context optimization](modules/5-context-optimization.md) | 🟡    |
-| 6  | [Lever 4: Advanced Workflow](modules/6-advanced-workflow.md) | 🟡    |
-| 7  | [Lever 5: Deterministic controls](modules/7-deterministic-controls.md) | 🟡    |
-| 8  | [Lever 6: Persistent context](modules/8-persistent-context.md) | 🔴    |
+| 1  | [Model selection](modules/1-model-selection.md) | 🟡    |
+| 2  | [Agent guessing](modules/2-agent-guessing.md) | 🟢    |
+| 3  | [Prompt engineering](modules/3-prompt-engineering.md) | 🟡    |
+| 4  | [Stateless model](modules/4-stateless-model.md) | 🟢    |
+| 5  | [Context optimization](modules/5-context-optimization.md) | 🟡    |
+| 6  | [Deterministic controls](modules/6-deterministic-controls.md) | 🟡    |
+| 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | 🟡    |
+| 8  | [Persistent context](modules/8-persistent-context.md) | 🔴    |
 | 9  | [Become a Token expert](modules/9-token-expert.md) | 🔴    |
 
 ---

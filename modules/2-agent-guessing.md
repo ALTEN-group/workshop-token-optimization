@@ -1,4 +1,4 @@
-# Module 1 — Agent guessing 🟢
+# Module 2 — Agent guessing 🟢
 
 **Goal:** Test the cost of the "agent gambling" anti-pattern by deliberately doing it, then doing it right, and compare.
 
@@ -52,4 +52,4 @@ Part A fails partly because the agent has to *guess* several things in a row (wh
 
 An up-front investment in context + a stop condition beats retry-until-it-works on retries, turns and correctness.
 
-➡️ Next: [2 — Stateless model](2-stateless-model.md)
+➡️ Next: [3 — Prompt engineering](3-prompt-engineering.md)

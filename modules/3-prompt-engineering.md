@@ -1,4 +1,4 @@
-# Module 4 — Lever 3: Prompt engineering 🟡
+# Module 3 — Prompt engineering 🟡
 
 **Goal:** turn vague asks into **precise prompts with explicit context and stop conditions**.
 
@@ -91,4 +91,4 @@ Notice the model cannot read your mind or your team wiki, explicit beats implici
 
 You can convert vague requests into precise, bounded prompts, and you have seen stop conditions visibly shrink scope creep and rework.
 
-➡️ Next: [5 — Lever 2: Context optimization](5-context-optimization.md)
+➡️ Next: [4 — Stateless model](4-stateless-model.md)
