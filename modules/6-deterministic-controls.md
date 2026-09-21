@@ -31,7 +31,7 @@ You’ve given every future agent task a reliable way to verify its changes.
 
 ## Exercise B: Tests as the contract
 
-Labs are **cumulative**. Module 5 attached `checkRoutePattern` to `POST /routes`. These tests lock that contract in. If you skipped module 5, the 400 cases may fail until you wire the validator — that is still useful: red tests become the target.
+Labs are **cumulative**. Module 4 attached `checkRoutePattern` to `POST /routes`. These tests lock that contract in. If you skipped module 4, the 400 cases may fail until you wire the validator — that is still useful: red tests become the target.
 
 1. New Chat, **Agent** mode. Add [`route.js`](../src/routes/route.js).
 2. Prompt:
@@ -40,7 +40,7 @@ Labs are **cumulative**. Module 5 attached `checkRoutePattern` to `POST /routes`
    Install Jest and supertest, then write tests for POST /routes covering: valid input returns 201; missing values returns 400; empty values returns 400. Put them in tests/routes.test.js. Done when `npm test` actually runs the new tests. If module 4 is done, the 400 cases should be able to pass; if validation is still missing, it is fine if they fail.
    ```
 
-3. Run `npm test`. Red tests are a contract to satisfy; green 400 cases mean module 5’s validator is doing its job.
+3. Run `npm test`. Red tests are a contract to satisfy; green 400 cases mean module 4’s validator is doing its job.
 
 ---
 

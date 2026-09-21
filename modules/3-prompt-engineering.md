@@ -91,4 +91,4 @@ Notice the model cannot read your mind or your team wiki, explicit beats implici
 
 You can convert vague requests into precise, bounded prompts, and you have seen stop conditions visibly shrink scope creep and rework.
 
-➡️ Next: [4 — Stateless model](4-stateless-model.md)
+➡️ Next: [4 — Context optimization](4-context-optimization.md)

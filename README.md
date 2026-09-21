@@ -27,8 +27,8 @@ npm i
 | 1  | [Model selection](modules/1-model-selection.md) | 🟡    |
 | 2  | [Agent guessing](modules/2-agent-guessing.md) | 🟢    |
 | 3  | [Prompt engineering](modules/3-prompt-engineering.md) | 🟡    |
-| 4  | [Stateless model](modules/4-stateless-model.md) | 🟢    |
-| 5  | [Context optimization](modules/5-context-optimization.md) | 🟡    |
+| 4  | [Context optimization](modules/4-context-optimization.md) | 🟡    |
+| 5  | [Stateless model](modules/5-stateless-model.md) | 🟢    |
 | 6  | [Deterministic controls](modules/6-deterministic-controls.md) | 🟡    |
 | 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | 🟡    |
 | 8  | [Persistent context](modules/8-persistent-context.md) | 🔴    |

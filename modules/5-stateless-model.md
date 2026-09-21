@@ -1,4 +1,4 @@
-# Module 4 — Stateless model 🟢
+# Module 5 — Stateless model 🟢
 
 **Goal:** internalize the model is **stateless** and that the **context window** has biases, then observe both directly.
 
@@ -70,4 +70,4 @@ You will usually get better compliance when the critical rule is at the **end** 
 (2) Context accumulates per turn
 (3) Placement within the window changes compliance. 
 
-➡️ Next: [5 — Context optimization](5-context-optimization.md)
+➡️ Next: [6 — Deterministic controls](6-deterministic-controls.md)
