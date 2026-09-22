@@ -30,7 +30,7 @@ npm i
 | 4  | [Context optimization](modules/4-context-optimization.md) | 🟡    |
 | 5  | [Stateless model](modules/5-stateless-model.md) | 🟢    |
 | 6  | [Deterministic controls](modules/6-deterministic-controls.md) | 🟡    |
-| 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | 🟡    |
+| 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | 🔴    |
 | 8  | [Persistent context](modules/8-persistent-context.md) | 🔴    |
 | 9  | [Become a Token expert](modules/9-token-expert.md) | 🔴    |
 
