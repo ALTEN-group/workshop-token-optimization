@@ -64,6 +64,24 @@ You will usually get better compliance when the critical rule is at the **end** 
 
 ---
 
+## Reset discipline
+
+1. Do not keep piling new unrelated tasks into a session.
+2. Start a **fresh session** for the next task. Notice how a clean window means you re-supply only what is relevant, and the agent is not anchored to earlier, now-irrelevant decisions.
+
+> Habit: **one task, one session.** When a task is done, reset.
+
+When a session gets long (and expensive), don't keep extending it:
+
+- Ask: `Summarize what we changed and the current state in 5 bullet points.`
+- Copy that summary, **start a new Chat**, and paste it as the seed. You have compressed a huge transcript into a few lines, a manual, high-leverage context reset.
+
+This directly fights "lost in the middle" and recency bias from long histories.
+
+> **Compact conversation.** In Copilot Chat, type `/compact` to compress the current conversation in place. Copilot also auto-summarizes older turns. Prefer a new chat when you can.
+
+---
+
 ## Expected outcome
 
 (1) Sessions are stateless, 
