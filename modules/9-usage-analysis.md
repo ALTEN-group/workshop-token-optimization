@@ -1,4 +1,4 @@
-# Module 9 — Analyze your usage 🔴
+# Module 9 — Understand and Improve Your Usage 🔴
 
 **Goal:** develop the analytical skills needed to understand how you use context, tools, and tokens, then improve your working habits based on evidence.
 

@@ -32,7 +32,7 @@ npm i
 | 6  | [Deterministic controls](modules/6-deterministic-controls.md) | Integrate automated guardrails like linters and tests to verify agent changes and stop compounding mistakes. | 🟡    |
 | 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | Decompose complex tasks into Think → Plan → Implement phases with separate clean contexts to prevent compounding errors. | 🔴    |
 | 8  | [Persistent context](modules/8-persistent-context.md) | Make quality repeatable using instructions, custom agents, on-demand skills, MCP tools, and sub-agents. | 🔴    |
-| 9  | [Usage Analysis](modules/9-usage-analysis.md) | Develop the analytical skills needed to understand usage patterns and improve context, tools, and token efficiency. | 🔴    |
+| 9  | [Understand and Improve Your Usage](modules/9-usage-analysis.md) | Develop the analytical skills needed to understand usage patterns and improve context, tools, and token efficiency. | 🔴    |
 
 ---
 
