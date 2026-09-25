@@ -1,4 +1,4 @@
-# Module 5 — Stateless model 🟢
+# Module 5 — Context window 🟢
 
 **Goal:** internalize the model is **stateless** and that the **context window** has biases, then observe both directly.
 
