@@ -21,18 +21,18 @@ npm i
 
 ## Modules
 
-| #  | Module                           | Level |
-| -- | -------------------------------- | ----- |
-| 0  | [ROI mindset](modules/0-roi-mindset.md) | 🟢    |
-| 1  | [Model selection](modules/1-model-selection.md) | 🟡    |
-| 2  | [Agent guessing](modules/2-agent-guessing.md) | 🟢    |
-| 3  | [Prompt engineering](modules/3-prompt-engineering.md) | 🟡    |
-| 4  | [Context optimization](modules/4-context-optimization.md) | 🟡    |
-| 5  | [Stateless model](modules/5-stateless-model.md) | 🟢    |
-| 6  | [Deterministic controls](modules/6-deterministic-controls.md) | 🟡    |
-| 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | 🔴    |
-| 8  | [Persistent context](modules/8-persistent-context.md) | 🔴    |
-| 9  | [Become a Token expert](modules/9-token-expert.md) | 🔴    |
+| #  | Module | Description | Level |
+| -- | ------ | ----------- | ----- |
+| 0  | [ROI mindset](modules/0-roi-mindset.md) | Set up the environment and adopt the core ROI habit where better quality prompts yield fewer retries and lower total cost. | 🟢    |
+| 1  | [Model selection](modules/1-model-selection.md) | Match model size to task complexity using the model picker to balance capability, speed, and cost. | 🟡    |
+| 2  | [Agent guessing](modules/2-agent-guessing.md) | Contrast the costly "agent gambling" anti-pattern with upfront investment in precise context and stop conditions. | 🟢    |
+| 3  | [Prompt engineering](modules/3-prompt-engineering.md) | Structure prompts with clear intent, explicit context, constraints, and verifiable stop conditions to stop scope creep. | 🟡    |
+| 4  | [Context optimization](modules/4-context-optimization.md) | Select only the minimal relevant files rather than full folders to prevent noise, drift, and context dilution. | 🟡    |
+| 5  | [Context window](modules/5-context-window.md) | Understand statelessness, context accumulation, and window biases to master session reset discipline. | 🟢    |
+| 6  | [Deterministic controls](modules/6-deterministic-controls.md) | Integrate automated guardrails like linters and tests to verify agent changes and stop compounding mistakes. | 🟡    |
+| 7  | [Advanced Workflow](modules/7-advanced-workflow.md) | Decompose complex tasks into Think → Plan → Implement phases with separate clean contexts to prevent compounding errors. | 🔴    |
+| 8  | [Persistent context](modules/8-persistent-context.md) | Make quality repeatable using instructions, custom agents, on-demand skills, MCP tools, and sub-agents. | 🔴    |
+| 9  | [Become a Token expert](modules/9-token-expert.md) | Maximize token value by pre-filtering inputs, keeping tool output lean, and analyzing usage patterns. | 🔴    |
 
 ---
 

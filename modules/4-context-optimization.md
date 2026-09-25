@@ -48,4 +48,4 @@ You will usually see more drift and noise. Extra context is not free, it dilutes
 
 You can assemble a minimal, relevant context for a real change, you have seen over-context hurt, and you have adopted the one-task-one-session reset habit.
 
-➡️ Next: [5 — Stateless model](5-stateless-model.md)
+➡️ Next: [5 — Context window](5-context-window.md)
