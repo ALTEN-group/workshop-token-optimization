@@ -1,12 +1,40 @@
-# Module 9 — Become a Token expert 🔴
+# Module 9 — Analyze your usage 🔴
 
-**Goal:** squeeze more value per token with filtering, collapsed tool output, and usage awareness.
+**Goal:** develop the analytical skills needed to understand how you use context, tools, and tokens, then improve your working habits based on evidence.
 
-> Use scripts to filter data · optimize outputs · collapse tool calls · analyze usage patterns.
+> Observe usage · identify waste · test improvements · turn recurring lessons into defaults.
 
 ---
 
-## 1. Filter data *before* it enters the context
+## 1. Observe before you optimize
+
+Good token optimization starts with analysis. After a task or lab, review what happened and ask:
+
+- Which tasks needed the most retries, and why?
+- What information was missing, irrelevant, or repeated?
+- Which tool calls produced more output than you could use?
+- Where did the agent lose time or make avoidable mistakes?
+- Which instruction, model, or stop condition would have changed the result?
+
+The goal is to distinguish a one-off problem from a recurring pattern. Track a few concrete signals: retries, context size, unnecessary tool output, failed assumptions, and the time needed to reach a useful result.
+
+---
+
+## 2. Form a hypothesis and test it
+
+Analytical thinking means turning an observation into a testable improvement. For example:
+
+| Observation | Hypothesis | Experiment |
+| --- | --- | --- |
+| The agent rereads large files | Too much irrelevant context is being provided | Filter the files before sending them |
+| A command returns pages of logs | The output contains more detail than the task requires | Keep only the summary or relevant lines |
+| The same correction appears repeatedly | A missing instruction is causing the errors | Add the correction to a persistent instruction or skill |
+
+Change one variable at a time when possible, then compare the result. Keep the improvement only when it reduces retries, output, or effort without reducing quality.
+
+---
+
+## 3. Filter data *before* it enters the context
 
 Don't make the agent read a file to find one thing. Pre-filter then paste only the result.
 When you can, paste the small important content into Chat. You decide what's relevant, not the model wading through noise.
@@ -21,13 +49,13 @@ npm test 2>&1 | tail -n 20
 
 ---
 
-## 2. Keep tool output lean
+## 4. Keep tool output lean
 
 When the agent runs commands, **noisy output is tokens**. Prefer commands that emit only what's needed:
 
 | Noisy | Lean |
 | --- | --- |
-| `npm test` (full log) | npm test 2>&1 | tail -n 20` |
+| `npm test` (full log) | `npm test 2>&1 | tail -n 20` |
 | `cat bigfile.js` | `sed -n '40,80p' bigfile.js` |
 | `ls -R` | `git ls-files src` |
 
@@ -41,16 +69,18 @@ Useful extras (optional):
 
 ---
 
-## 3. Analyze your usage patterns and improve
+## 5. Turn findings into better defaults
 
-Reflect on the labs you just ran:
+Once a pattern is confirmed, make the lesson reusable:
 
-- Which tasks needed the most retries? What was missing: context, a stop condition, the wrong model?
-- Where did you over-stuff context?
-- Which guardrail caught the most agent mistakes?
+- Add a persistent instruction when the same guidance is needed across tasks.
+- Create a skill when the workflow is repeatable and has clear inputs and outputs.
+- Add a guardrail when it prevents a known class of mistakes.
+- Choose a different model when the task's reasoning, speed, or cost requires it.
+- Define a stop condition when the agent tends to continue without producing more value.
 
-Turn recurring fixes into **persistent instructions or skills** so you never pay for that lesson twice.
+Review the next attempt to verify that the change helped. This closes the loop: observe, hypothesize, test, and standardize.
 
 ## Expected outcome
 
-You can pre-filter inputs, keep tool output and sessions lean, compress context with Copilot `/compact` before it bloats, review chat history for recurring fixes, and improve your defaults.
+You can analyze your usage, pre-filter inputs, keep tool output and sessions lean, compress context with Copilot `/compact` before it bloats, review chat history for recurring fixes, and improve your defaults.
